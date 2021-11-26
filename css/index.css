@@ -1,0 +1,154 @@
+html{
+    height: 100%;
+}
+*{
+    margin: 0%;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-image: url("../images/BgMain.png");
+    background-repeat: no-repeat;
+    background-position: cover cover/center;
+    background-size: 100%;
+    
+}
+
+.Sec{
+    border: 2px solid white;
+    display: flex;
+    flex-flow: column wrap; 
+} 
+
+#rSec{
+    margin-top: 180px;
+    float: right;
+    margin-right: 50px;
+    background-color: rgba(158, 250, 189, 0.24);
+    height: 350px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 33%;
+    padding: 15px 20px 15px 20px;
+    row-gap: 8px;
+    text-align: center;
+    box-shadow: 0px 0px 18px 14px rgba(80, 184, 89, 0.781);
+    transform-origin: top;
+    animation-duration: 2000ms;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+/* Sign in Sign up card */
+.input{
+    border: 1px solid black;
+    width: 75%;
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
+}
+
+#sign{
+    padding: 5px 8px 5px 8px;
+    font-size: 1.2rem;
+}
+
+#signCardTxt,#cancel{
+    font-size: 1rem;
+    font-weight: 700;
+    padding-top: 30px;
+}
+
+#signCardTxt:hover,#cancel:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#pass{
+    width: 66%;
+}
+
+/* More info card */
+#info{
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    height: 350px;
+    background-color: rgba(158, 250, 189, 0.24);
+    border: 2px solid white;
+    width: 33%;
+    box-shadow: 0px 0px 18px 14px rgba(80, 184, 89, 0.781);
+    margin-top: 186px;
+    position: absolute;
+    padding: 8px 14px 8px 14px;
+    right: 4.2%;
+    transform-origin: top;
+    animation-duration: 2000ms;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+.form2{
+    width: 200px;
+}
+#age{
+    margin-left: 78px;
+}
+#submit{
+    padding: 2px 8px 2px 8px;
+    font-size: 1.2rem;
+}
+#rdBtn{
+    margin-left: 37px;
+}
+/* General */
+button{
+    border-radius: 10px;
+    border: 1.5px solid black;
+    width: 55%;
+    align-self: center;
+}
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+}
+
+button:hover{
+    cursor: pointer;
+    transition: background;
+    transition-duration: 500ms;
+    font-weight: 600;
+}
+
+/* KeyFrames */
+/* @keyframes rollDown {
+    0%{
+        transform: scaleY(0%);
+    }
+    50%{
+        transform:  scaleY(25%);
+    }
+    75%{
+        transform:  scaleY(50%);
+    }
+    100%{
+        transform:  scaleY(100%);
+    }
+}
+
+@keyframes rollUp{
+    0%{
+        transform: scaleY(100%);
+    }
+    50%{
+        transform:  scaleY(75%);
+    }
+    75%{
+        transform:  scaleY(50%);
+    }
+    100%{
+        transform:  scaleY(0%);
+    }
+} */

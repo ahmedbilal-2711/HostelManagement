@@ -1,0 +1,39 @@
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    min-height: 100%;
+    background-position: center;
+}
+/* Sign Card */
+#rSec{
+    float: none;
+    width: 70%;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+#pass{
+    width: 64%;
+}
+
+/* More Info Card */
+#info{
+    width: 70%;
+    right: 10.8%;
+    bottom: 152px;
+    top: -85px;
+
+}
+.form2{
+    width: 100px;
+}
+
+#rdBtn{
+    margin-left: 0px;
+
+}
