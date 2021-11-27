@@ -8,11 +8,16 @@ html{
 }
 
 body{
-    background-image: url("../images/BgMain.png");
     background-repeat: no-repeat;
     background-position: cover cover/center;
     background-size: 100%;
     
+}
+
+#bgVid{
+    position: fixed;
+    z-index: -2;
+    height: 800px;
 }
 
 .Sec{
@@ -25,7 +30,7 @@ body{
     margin-top: 180px;
     float: right;
     margin-right: 50px;
-    background-color: rgba(158, 250, 189, 0.24);
+    background-color: rgba(37, 44, 38, 0.493);
     height: 350px;
     display: flex;
     flex-flow: column wrap;
@@ -34,7 +39,7 @@ body{
     padding: 15px 20px 15px 20px;
     row-gap: 8px;
     text-align: center;
-    box-shadow: 0px 0px 18px 14px rgba(80, 184, 89, 0.781);
+    box-shadow: 0px 0px 25px 25px rgba(37, 44, 38, 0.493);
     transform-origin: top;
     animation-duration: 2000ms;
     animation-direction: alternate;

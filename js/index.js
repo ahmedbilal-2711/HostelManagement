@@ -82,14 +82,14 @@ submit.addEventListener('click',()=>{
 // Display Sign In page
 function signIn() {
     box.style.boxShadow='0px 0px 18px 14px rgba(80, 135, 184, 0.781)';
-    box.style.backgroundColor=' rgba(158, 207, 250, 0.24)';
+    box.style.backgroundColor='rgba(80, 135, 184, 0.581)';
     c[0].children[0].innerHTML='Sign In';
     c[3].innerHTML="Sign In";
     c[4].innerHTML='Create Account';
 }
 function signUp() {
-    box.style.boxShadow='0px 0px 18px 14px rgba(80, 184, 89, 0.781)';
-    box.style.backgroundColor=' rgba(158, 250, 189, 0.24)';
+    box.style.boxShadow='0px 0px 18px 14px rgba(37, 44, 38, 0.493)';
+    box.style.backgroundColor='rgba(37, 44, 38, 0.393)';
     c[0].children[0].innerHTML='Sign Up';       
     c[3].innerHTML="Sign Up";
     c[4].innerHTML='Sign In';
