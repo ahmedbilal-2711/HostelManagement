@@ -44,6 +44,11 @@ body{
 #searchBox{
     border-radius: 5px;
     width: 350px;
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 17px;
+
 }
 
 #sideBox{
@@ -62,7 +67,7 @@ body{
 }
 
 #dashImg{
-    height: 17px;
+    height: 28px;
 }
 
 #navBar{
@@ -77,7 +82,7 @@ body{
     margin: 0;
     width: 180px;
     padding-top: 30px;
-    padding-bottom: 500px;
+    padding-bottom: 379px;
     border: 1px solid black;
 }
 
@@ -116,7 +121,7 @@ a:hover{
 
 @keyframes hoverDashboard {
     0%{
-        transform: rotateX(90deg);
+        transform: rotateX(0deg);
     }
     50%{
         transform: rotateX(0deg);
