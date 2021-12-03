@@ -64,10 +64,15 @@ body{
     align-items: center;
     justify-content: center;
     padding: 5px 0px 5px 0px;
+    border-bottom: 1px solid white;
 }
 
 #dashImg{
     height: 28px;
+}
+
+.DashOptions{
+    display: none;
 }
 
 #navBar{
@@ -75,14 +80,14 @@ body{
     height: 100%;
 }
 
-#navBar ul{
+#navBarUl{
     background-color: rgba(0, 0, 0, 0.904);
     color:white;
+    position: absolute;
     padding: 0;
     margin: 0;
     width: 180px;
     padding-top: 30px;
-    padding-bottom: 379px;
     border: 1px solid black;
 }
 
@@ -97,23 +102,16 @@ body{
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-}
-
-a{
-    color: white;
-    text-decoration: none;
     font-size: x-large;
+    color: white;
+    transition: background-color;
+    transition-duration: 800ms;
 }
 
-li:hover{
-    animation-name: hoverDashboard;
-    animation-duration: 1500ms;
-    animation-fill-mode: forwards;
-    background-color: white;
+#navBar li:hover{
     color: black;
-}
-
-a:hover{
+    background-color: white;
+    cursor: pointer;
     color: black;
 }
 
@@ -121,7 +119,7 @@ a:hover{
 
 @keyframes hoverDashboard {
     0%{
-        transform: rotateX(0deg);
+        transform: rotateX(90deg);
     }
     50%{
         transform: rotateX(0deg);
