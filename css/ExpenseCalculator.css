@@ -1,0 +1,111 @@
+body{
+    background-color:darkgrey;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    flex-wrap: nowrap;
+}
+
+.title{
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid black;
+    table-layout: fixed;
+    width: 100%;
+  }
+th,tr{
+    border: 2px solid black;
+    border-collapse: collapse;
+    font-family: Roboto;
+    font-size: 30px;
+}
+td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    font-family: Roboto;
+    font-size: 20px;
+}
+
+#Expense{
+    color:black;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+}
+#ExpenseInput{
+    color:black;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    border-radius: 15px;
+    border-color: black;
+    width: 90%; 
+    height: 10%;
+}
+
+#Amount{
+    color:black;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+#AmountInput{
+    color: black;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    border-radius: 15px;
+    border-color: black;
+    width: 90%;
+    height: 10%;
+}
+
+
+#submitbutton{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    font-size: 30px;
+    border-radius: 15px;
+   
+}
+
+
+#flex1{
+    width: 600px;
+    height: 400px;
+    padding-left: 30px;
+    padding-top: 30px;
+    margin-bottom: -20px;
+}
+
+
+#flex2{
+    width: 700px;
+    height: 400px;
+    margin-left: 10px;
+    padding-top: 50px;
+}
+
+
+#spend{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    font-size: 30px;    
+}

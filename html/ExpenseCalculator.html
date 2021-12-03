@@ -5,33 +5,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/ExpenseCalculator.css">
     <title>Expense Calculator</title>
 </head>
 
 <body>
-    <h3>Expense Calculator</h3>
-
-    <label for="Expense">Expense:</label>
-    <input type="text" id="Expense" name="Expense">
-    <br><br>
-
-    <label for="Amount">Amount:</label>
-    <input type="text" id="Amount" name="Amount">
-    <br><br><br>
-
-    <button type="button">Submit</button>
-    <br><br><br>
-
-    <label for="AmountSpend">TotalAmountSpend</label>
-    <input type="text" id="AmountSpend" name="AmountSpend">
+    <div class="title">
+        <h3>Expense Calculator</h3>
+    </div>
 
 
-    <br><br><br>
-    <label for="FetchData">Want to Fetch old Data?</label>
-    <button type="button">Click Here</button>
+<div class="flex-container">
+    <div id="flex1">
+        <label id="Expense" for="Expense">Expense:</label>
+        <input type="text" id="ExpenseInput" name="Expense" placeholder="Enter the Amount">
+        <br><br><br>
 
+        <label id="Amount" for="Amount">Amount:</label>
+        <input type="text" id="AmountInput" name="Amount" placeholder="Enter the Expense">
+        <br><br><br>
+        <button type="button" id="submitbutton">Submit</button>
+        <br><br><br>
+        <label id="spend" for="AmountSpend">TotalAmountSpend</label>
 
-    <label for="Selecting Row">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Select the row</label>
+    </div>
+        <div id="flex2">
+            <table>
+                <tr>
+                    <th colspan="2">ExpenseCalculator</th>
+                </tr>
+                <tr>
+                    <th>Expense</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>Bill</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td>Bill</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td>Bill</td>
+                    <td>1000</td>
+                </tr>
+            </table>
+        </div>
+</div>
 
 </body>
 
