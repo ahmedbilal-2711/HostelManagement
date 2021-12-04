@@ -11,47 +11,42 @@
 
 <body>
     <div class="title">
+        <div>
+            <video autoplay muted loop id="bgCalcVid">
+                <source src="../images/bgCalc.mp4" type="video/mp4">
+            </video>
+        </div>
         <h3>Expense Calculator</h3>
     </div>
-
-
 <div class="flex-container">
     <div id="flex1">
-        <label id="Expense" for="Expense">Expense:</label>
-        <input type="text" id="ExpenseInput" name="Expense" placeholder="Enter the Amount">
-        <br><br><br>
-
-        <label id="Amount" for="Amount">Amount:</label>
-        <input type="text" id="AmountInput" name="Amount" placeholder="Enter the Expense">
-        <br><br><br>
-        <button type="button" id="submitbutton">Submit</button>
-        <br><br><br>
-        <label id="spend" for="AmountSpend">TotalAmountSpend</label>
-
-    </div>
-        <div id="flex2">
-            <table>
-                <tr>
-                    <th colspan="2">ExpenseCalculator</th>
-                </tr>
-                <tr>
-                    <th>Expense</th>
-                    <th>Amount</th>
-                </tr>
-                <tr>
-                    <td>Bill</td>
-                    <td>1000</td>
-                </tr>
-                <tr>
-                    <td>Bill</td>
-                    <td>1000</td>
-                </tr>
-                <tr>
-                    <td>Bill</td>
-                    <td>1000</td>
-                </tr>
-            </table>
+        <div class="input">
+            <label class="enterHead" id="Expense" for="Expense">Expense:</label>
+            <input type="text" class="tableInput" id="ExpenseInput" name="Expense" placeholder="Enter the Amount">
+            <br><br><br>
         </div>
+        <div class="input">
+            <label class="enterHead" id="Amount" for="Amount">Amount:</label>
+            <input type="text" class="tableInput" id="AmountInput" name="Amount" placeholder="Enter the Expense">
+            <br><br><br>
+        </div>
+        <button type="button" id="submitbutton">Add</button>
+    </div>
+    <div id="flex2">
+        <table>
+            <tr>
+                <th colspan="2">Expenses History</th>
+            </tr>
+            <tr>
+                <th>Expenses</th>
+                <th>Amount (Rs)</th>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </div>
 </div>
 
 </body>

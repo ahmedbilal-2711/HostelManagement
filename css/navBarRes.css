@@ -1,0 +1,15 @@
+#searchBox{
+    display: none;
+}
+
+.DashOptions{
+    display: flex;
+    padding-right: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+ul>li>p{
+    display: none;
+}
+
