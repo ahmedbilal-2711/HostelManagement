@@ -3,12 +3,15 @@ body{
 }
 
 #Heading{
+    display: flex;
+    flex-flow: row wrap;
     color: black;
-    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -19,7 +22,7 @@ body{
 
 table{
     border: 1px solid black;
-    width: 100%;
+    width: 98%;
     justify-items : center;
     border-collapse: collapse;
     
