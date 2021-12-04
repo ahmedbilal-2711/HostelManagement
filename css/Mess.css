@@ -1,5 +1,4 @@
 body{
-<<<<<<< HEAD
     background-color: whitesmoke;
 }
 
@@ -7,23 +6,6 @@ body{
     display: flex;
     flex-flow: row wrap;
     color: black;
-=======
-    background-color: #f5f5f5;
-}
-#MessVid{
-    margin-left: -300px;
-    height: 100px;
-    width: 200px;
-}
-
-.title{
-    display: flex;
-    flex-flow: row wrap;
-    color: black;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: left;
->>>>>>> 9121931442423553910a6af5999d1b1c7289179c
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -32,28 +14,23 @@ body{
     align-items: center;
     
 }
-<<<<<<< HEAD
 
 #bgCalcVid{
     height: 100px;
     width: 100px;
 }
 
-=======
-.title:hover{
-    color:  rgba(218, 165, 32, 0.747);
-}
->>>>>>> 9121931442423553910a6af5999d1b1c7289179c
 table{
     border: 1px solid black;
     width: 98%;
+    height: 98%;
     justify-items : center;
     border-collapse: collapse;
     
 }
 
 th{
-    height:50px;
+    height:45px;
     border: 1px solid black;
     border-collapse: collapse;
     color: black;
