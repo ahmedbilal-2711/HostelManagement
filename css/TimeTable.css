@@ -1,14 +1,27 @@
 body{
-    background-color: darkgray;
+    background-color: #f5f5f5;
 }
 
-#heading{
+#TimeVid{
+    margin-left: -300px;
+    height: 100px;
+    width: 200px;
+}
+
+.title{
+    display: flex;
+    flex-flow: row wrap;
     color: black;
-    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: left;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 38px;
+    font-size: 32px;
+}
+.title:hover{
+    color:  rgba(218, 165, 32, 0.747);
 }
 
 table{
@@ -29,6 +42,7 @@ th{
     font-style: normal;
     font-weight: bold;
     font-size: 35px;
+    background-color:  rgba(218, 165, 32, 0.747);
 }
 tr{
     border: 1px solid black;
@@ -76,4 +90,10 @@ td{
     color: black;
     font-size: 20px;
     border-radius: 15px;
+}
+#SaveButton:hover{
+    background-color:  rgba(218, 165, 32, 0.747);
+}
+#EditButton:hover{
+    background-color:  rgba(218, 165, 32, 0.747);
 }

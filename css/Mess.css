@@ -18,6 +18,10 @@ body{
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
+    
+}
+.title:hover{
+    color:  rgba(218, 165, 32, 0.747);
 }
 table{
     border: 1px solid black;

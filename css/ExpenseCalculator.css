@@ -29,6 +29,9 @@ body{
     font-weight: bold;
     font-size: 32px;
 }
+.title:hover{
+    color:  rgba(218, 165, 32, 0.747);
+}
 
 #bgCalcVid{
     height: 100px;
