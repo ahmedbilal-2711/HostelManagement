@@ -29,9 +29,6 @@ body{
     font-weight: bold;
     font-size: 32px;
 }
-.title:hover{
-    color:  rgba(218, 165, 32, 0.747);
-}
 
 #bgCalcVid{
     height: 100px;
@@ -53,7 +50,7 @@ th,tr{
 }
 
 th{
-    background-color: rgba(218, 165, 32, 0.747);
+    background-color: rgba(39, 140, 223, 0.795);
 }
 td{
     border: 2px solid black;
