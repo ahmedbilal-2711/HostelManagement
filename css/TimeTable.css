@@ -1,0 +1,78 @@
+body{
+    background-color: darkgray;
+}
+
+#heading{
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+}
+table{
+    border: 1px solid black;
+    width: 100%;
+    justify-items : center;
+    border-collapse: collapse;
+    
+}
+
+th{
+    height:45px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+}
+tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
+td{ 
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.flex-container{
+    justify-content: right;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+
+#EditButton{
+    margin-right: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    border-radius: 15px;
+}
+#SaveButton{
+    margin-left: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    border-radius: 15px;
+}
