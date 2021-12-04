@@ -8,24 +8,36 @@
     <title>Attendance Sheet</title>
 </head>
 <body>
-    <div id="heading">
-        <h3>
-            Attendance Sheet
-        </h3>
-    </div>
 
+    
+
+    <div class="flex-container">
+        <div id="heading">
+            <video autoplay muted loop id="AttendanceVid">
+                <source src="/images/attendance.mp4" type="video/mp4">
+            </video>
+            <h3>
+                Attendance Sheet
+            </h3>
+        </div>
+    </div>
     <div class="flex-container">
         <div id="flex1">
             <label id="QalamID" for="QalamID">QalamID:</label>
-            <br>
             <input type="text" id="QalamInput" name="Qalam" placeholder="Enter the QalamID">
             <br><br><br>
     
             <label id="Password" for="Password">Password:</label>
-            <br>
             <input type="text" id="PasswordInput" name="Password" placeholder="Enter the Password">
             <br><br><br>
-            <button type="button" id="MarkButton">Mark</button>
+            <button type="button" class="MarkButton">Mark</button>
+        </div>
+
+        <div id="flex2">
+            <br><br>
+            <label id="Record"  for="AttendanceRecord">Click to get the Attendance Record</label><br><br>
+            <br>
+            <button type="button" class="MarkButton">Click Here</button>
         </div>
     </div>
 </body>

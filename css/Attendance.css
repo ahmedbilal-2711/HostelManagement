@@ -1,42 +1,71 @@
-body{
-    background-color: darkgray;
+*{
+    padding:0;
+    margin-top: 0;
 }
+body{
+    background-color: #f5f5f5;
+}
+
+
 #heading{
+    display: flex;
+    flex-flow: row wrap;
     color: black;
+    padding: 30px 0px 0px 0px;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 38px;
+    font-size: 32px;
+}
+#AttendanceVid{
+    margin-top: -20px;
+    margin-right: 250px;
+    height: 150px;
+    width: 200px;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
 #flex1{
-    border: 1px solid black;
+
     width: 40%;
     height: 400px;
-    margin-left: 50px  ;
+    margin-left: 100x  ;
     padding-top: 30px;
-    box-shadow: 0px 0px 25px 25px rgba(37, 44, 38, 0.493);
 }
 
+#flex2{
+    margin-top: -30px;
+    width: 40%;
+    height: 400px;
+}
 #QalamID{
     color:black;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 45px;
+    font-size: 25px;
     padding-left: 20px;
 }
 #QalamInput{
-    margin-left: 20px;
+    padding-left: 10px;
     color:black;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     border-radius: 15px;
     border-color: black;
-    width: 70%; 
-    height: 10%;
+    width: 50%; 
+    height: 25px;
 }
 
 #Password{
@@ -45,29 +74,44 @@ body{
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 45px;
+    font-size: 25px;
 }
 
 #PasswordInput{
-    margin-left: 20px;
+    padding-left: 10px;
     color: black;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     border-radius: 15px;
     border-color: black;
-    width: 70%;
-    height: 10%;
+    width: 50%;
+    height: 25px;
 }
 
 
-#MarkButton{
-    margin-left: 22px;
+.MarkButton{
+    margin-left: 170px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     color: black;
-    font-size: 30px;
-    border-radius: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
    
+}
+.MarkButton:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.795);
+    color: white;
+}
+
+#Record{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    color: rgba(218, 165, 32, 0.747);
+    font-size: 40px;
+
 }
