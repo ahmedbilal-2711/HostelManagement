@@ -1,0 +1,51 @@
+body{
+    background-color: darkgray;
+}
+#Heading{
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    
+}
+table{
+    border: 1px solid black;
+    width: 100%;
+    justify-items : center;
+    border-collapse: collapse;
+    
+}
+
+th{
+    height:50px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+}
+tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
+td{ 
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
