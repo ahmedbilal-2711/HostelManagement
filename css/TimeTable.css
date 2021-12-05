@@ -13,7 +13,7 @@ body{
     flex-flow: row wrap;
     color: black;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     text-align: left;
     font-family: Roboto;
     font-style: normal;
@@ -21,7 +21,7 @@ body{
     font-size: 32px;
 }
 .title:hover{
-    color:  rgba(218, 165, 32, 0.747);
+    color:  skyblue;
 }
 
 table{
@@ -42,7 +42,7 @@ th{
     font-style: normal;
     font-weight: bold;
     font-size: 35px;
-    background-color:  rgba(218, 165, 32, 0.747);
+    background-color:  rgb(114, 191, 221);
 }
 tr{
     border: 1px solid black;
