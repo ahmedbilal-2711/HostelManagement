@@ -1,30 +1,20 @@
-let ms = require("mssql");
-let connectionStr={
-    serverName:'AHMED\SQLEXPRESS',
+const sql = require("mssql");
+
+const config = {
     database:'SampleDataLab',
-    user:"",
-    password:""
+    server:'AHMED\\SQLEXPRESS'
 }
 
-function getData() {
-    let con = new ms.connect(connectionStr);
-    let req = new ms.Request(con);
-    con.connect(function(err){
-        if (err) {
-            console.log(err);
-            return;
-        }
-        req.query("Select * from Customer",function(err,data){
-            if (err) {
-                console.log(err);
-                return;
-            }
-            else{
-                console.log(data);
-            }
-            con.close();
-        })
-    })
+async function con() {
+    try {
+        let pool = await sql.connect(config);
+        let products = await pool.request().query("select * from Customer");
+        return products.data;
+    } catch (error) {
+        console.log(error);
+    }
 }
 
-getData();
+con().then(result=>{
+    console.log(result);
+})
