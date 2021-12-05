@@ -39,6 +39,7 @@ body{
 }
 
 table {
+    margin-left: 20px;
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid black;
@@ -83,6 +84,7 @@ td{
     width: 265px; 
     height: 25px;
     padding: 2px 5px 2px 5px;
+    margin-left: 10px;
 }
 
 
@@ -139,3 +141,157 @@ td{
     color: black;
     font-size: 30px;    
 }
+.linebreak{
+    display: block;
+}
+@media (min-width:902px) {
+    .enterHead{
+       margin-left: 10px;
+    }
+    .tableInput{
+        margin-left: 10px;
+    }
+    table{
+        margin-left: 20px;
+        margin-right: -50px;
+    }
+}
+@media (min-width:821px) and (max-width:878px) {
+    #Amount{
+        margin-right: 119px;
+        margin-left: -109px;
+        
+    }
+    #AmountInput{
+        margin-left: 0px;
+    }
+    #Expense{
+        margin-right: 119px;
+        margin-left: -109px;
+    }
+    #ExpenseInput{
+        margin-left: 0px;
+    }
+   
+}
+@media (min-width:792px) and (max-width:821px) {
+    #Amount{
+        margin-right: 119px;
+        margin-left: -109px;
+        
+    }
+    #AmountInput{
+        margin-left: 0px;
+    }
+    #Expense{
+        margin-right: 119px;
+        margin-left: -109px;
+    }
+    #ExpenseInput{
+        margin-left: 0px;
+    }
+    table{
+        margin-left: -50px;
+        margin-right: -50px;
+    }
+    th{
+        font-size: 18px;
+    }
+    td{
+        font-size: 15px;
+    }
+}
+@media  (min-width:700px) and  (max-width:791px)  {
+    #Amount{
+        margin-right: 180px;
+        margin-left: 20px;
+        
+    }
+    #AmountInput{
+        margin-left: 40px;
+    }
+    #Expense{
+        margin-right: 180px;
+        margin-left: 20px;
+    }
+    #ExpenseInput{
+        margin-left: 40px;
+    }
+    table{
+        margin-left: 20px;
+        margin-right: -50px;
+    }
+    th{
+        font-size: 18px;
+    }
+    td{
+        font-size: 15px;
+    }
+}
+@media  (min-width:600px) and  (max-width:699px)  {
+    #Amount{
+        margin-right: 105px;
+        margin-left: 0px;
+        
+    }
+    #AmountInput{
+        margin-left: 40px;
+        width: 200px;
+    }
+    #Expense{
+        margin-right: 105px;
+        margin-left: 0px;
+    }
+    #ExpenseInput{
+        margin-left: 40px;
+        width: 200px;
+    }
+    table{
+        margin-left: -200 px;
+        margin-right: -50px;
+    }
+    th{
+        font-size: 18px;
+    }
+    td{
+        font-size: 15px;
+    }
+}
+@media(max-width:599px){
+    .enterHead{
+        margin-left: -50px;
+        font-size: 30px;
+    }
+    .tableInput{
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 200px;
+        height: 15px;
+    }
+    #submitbutton{
+        font-size: 20px;
+    }
+    .flex-container{
+        flex-direction: column;
+    }
+    #flex1{
+        margin-left: 120px;
+        margin-right: 0px;
+    }
+    #flex2{
+        margin-top: -200px;
+        margin-left: 110px;
+        margin-right: 0px;
+    }
+    table{
+        margin-left: 0px;
+        width: 50%;
+    }
+    td{
+        font-size: 28px;
+    }
+    th{
+        font-size: 23px;
+    }
+} 
+
