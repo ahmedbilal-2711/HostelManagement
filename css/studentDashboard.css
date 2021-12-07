@@ -71,7 +71,7 @@ body{
     bottom: 0px;
 }
 
-#bars>li:before{
+#bars>li::after{
     content: attr(dataPerc)'%';
     color: white;
     position: relative;

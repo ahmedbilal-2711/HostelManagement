@@ -9,6 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "knex": "^0.95.14",
+    "mssql": "^7.3.0",
+    "objection": "^3.0.0",
+    "pg": "^8.7.1",
+    "stream": "0.0.2",
+    "tedious": "^14.0.0"
   }
 }
