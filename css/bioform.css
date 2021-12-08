@@ -1,24 +1,81 @@
 body{
-    background-color: whitesmoke;
+    background-image:url(/images/expense.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #FormTitle{
     text-align: center;
     font-size: 30px;
-    color: darkgray;
+    color: black;
+    font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #FormTitle:hover{
     color: blue;
 }
 
-.flex-container{
+.grid-container{
+    margin-left: 30px;  
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.item{ 
+    border-radius: 15px;
+    padding-bottom: 10px;
+    height: 80px;
+    text-align: left;
+    align-items: center;
     display: flex;
-    flex-direction: row;
-    flex-wrap: row wrap;
+    justify-content: center;
+    justify-items: center;
+} 
+.heading{
+    font-size: 25px;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+    color:black;
+    width: 200px;
 }
-.flex-container > div{
-    border: 1px solid black;
-    margin:10px;
-    width:200px;
-    text-align: center;
+.inputfield{
+    margin-top: 15px;
+    font-size: 15px;
+    margin-left: -10px;
+    width: 600px;
+    height: 30px;
+    color:black;
+    border-radius: 15px;
+    padding-left: 10px;
 }
+
+#submitbutton{
+    font-style: normal;
+    font-weight: bold;
+    margin: 30px;
+    margin-right: 150px;
+    color: black;
+    font-size: 20px;
+    border-radius: 10px; 
+    padding: 5px;
+    float: right;
+}
+
+#submitbutton:hover{
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+}
+/* #sameasabove{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+#address{
+
+    display: flex;
+    justify-items: left;
+} */

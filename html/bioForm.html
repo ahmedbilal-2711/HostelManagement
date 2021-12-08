@@ -13,84 +13,82 @@
             Hostel Registration Form
         </h3>
     </div>
-    <form action="/" class="flex-container">
-        <div>
+    <form action="/" class="grid-container">
+        <div class="item">
             <label for="name" class="heading">Name:</label>
             <input type="text" class="inputfield" id="nameinput" placeholder="Enter Your Name">
         </div>
         <br>
-        <div>
+        <div class="item">
             <label for="fathername" class="heading">Father's Name:</label>
             <input type="text" class="inputfield" id="fnameinput" placeholder="Enter Your Father Name">
         </div>
         <br>
-        <div>
-            <label for="semester" class="heading">semester:</label>
+        <div class="item">
+            <label for="semester" class="heading">Semester:</label>
             <input type="text" class="inputfield" id="seminput" placeholder="Enter Your Semester Number">
         </div>
         <br>
-        <div>
+        <div class="item">
             <label for="discipline" class="heading">Discipline:</label>
             <input type="text" class="inputfield" id="disinput" placeholder="Enter Your Discipline">
         </div>
         <br>
-        <div>
+        <div class="item">
             <label for="meritno" class="heading">Nust Merit No:</label>
             <input type="text" class="inputfield" id="meritinput" placeholder="Enter Your Merit No">
         </div>
         <br>
-        <div>
+        <div class="item">
             <label for="cnic" class="heading">CNIC No:</label>
             <input type="text" class="inputfield" id="cnicinput" placeholder="Enter Your CNIC No">
         </div>
         <br>
-        <div>
+        <div class="item">
             <label for="DOB" class="heading">Date of Birth:</label>
             <input type="date" class="inputfield" id="dobinput" placeholder="Enter Your DOB">
         </div>
         <br>
-        <div>
+        <div class="item">
             <label for="paddress" class="heading">Permanent Address:</label>
             <input type="text" class="inputfield" id="paddinput" placeholder="Enter Your PermanentAddress">
         </div>
         <br>
-        <div>
-            <label for="same"id="sameasabove">Same As Above</label>
-            <input type="checkbox" class="chb">
-        </div>
-        <br>
-        <div>
-            <label for="Postaladdress" class="heading">Postal Address:</label>
+        <div class="item" id="address">
+            <!-- <label for="same"id="sameasabove">Same As Above</label>
+            <input type="checkbox" class="chb"><br> -->
+            <label for="Postaladdress" class="heading">Postal Address:</label> 
             <input type="text" class="inputfield" id="paddinput" placeholder="Enter Your Postal Address">
         </div>
         <br>
-        <div>
-            <label for="fno" class="heading">Gaurdian/Father's No</label>
+        <div class="item">
+            <label for="fno" class="heading">Father's No</label>
             <input type="text" class="inputfield" id="fnoinput" placeholder="Enter Your Father's No">
         </div>
         <br>
-        <div>
+        <div class="item">
             <label for="pno" class="heading">Personal No:</label>
             <input type="text" class="inputfield" id="noinput" placeholder="Enter Your Personal No">
         </div>
         <br>
-        <div>
+        <div class="item">
             <label for="residence" class="heading">Residence:</label>
             <input type="text" class="inputfield" id="residenceinput" placeholder="Enter Your Residence">
         </div>
         <br>
-        <div>
-            <label for="domicile" class="heading">domicile:</label>
+        <div class="item">
+            <label for="domicile" class="heading">Domicile:</label>
             <input type="text" class="inputfield" id="domicileinput" placeholder="Domicile district">
         </div>
         <br>
-        <div>
+        <div class="item">
             <label for="email" class="heading">Email:</label>
             <input type="email" class="inputfield" id="emailinput" placeholder="Enter Your Email">
         </div>
-
-
-
+        
     </form>
+    <div class="button">
+        <button type="button" id="submitbutton">Submit</button>
+    </div>
 </body>
 </html>
