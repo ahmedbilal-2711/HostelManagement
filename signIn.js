@@ -45,35 +45,21 @@ var config = {
     encrypt: false,
     useUTC: true,
   },
-
-  pool: {
-  /*   max: 100,
-    min: 0,
-    idleTimeoutMillis: 3600000,
-    connectionTimeout: 3600000,
-    requestTimeout: 3600000, */
-  },
 };
 var database = new sql.ConnectionPool(config);
-
 database
   .connect()
-  .then(function () {
-    console.log("connected");
-    database.query("SELECT * FROM Employee",function (err,data) {
-        if (err) {
-          console.log(err);
-        }
-        else{
-          console.log(data);
-        }
-    })
+  .then(pool => {
+    // pool.query`insert into Customer VALUES ('AA55','Ali','Bilal','Kh','Kh','Kh','4578',450.56)`;
+    return pool.query`select * FROM Customer`
+}).then(result => {
+    console.dir(result);
     database.close();
-  })
+})
   .catch((err) => {
     console.log(err);
   });
-
+  
 /* let express = require("express");
 let app = express();
 app.use(express.urlencoded({extented:true}));
