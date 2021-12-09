@@ -1,0 +1,42 @@
+body{
+    background-color: whitesmoke;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title:hover{
+    color: blue;
+}
+.room{
+    display: flex;
+    margin-top: 5px;
+    font-size: 20px;
+    margin-left: 40px;
+    width: 350px;
+    margin-right: 10px;
+    justify-content: center;
+}
+.items{
+    display: flex;
+    height: 100px;
+    width: 1200px;
+    box-shadow: 20px,20px,20px,20px darkgrey;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    justify-items: center;
+    align-items: center;
+    padding-left: 20px;
+}
+.heading{
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+
+}
