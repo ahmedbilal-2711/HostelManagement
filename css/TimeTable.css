@@ -1,5 +1,6 @@
 body{
     background-color: #f5f5f5;
+    background-image: linear-gradient(to right, #1E2738,#202020,#262641,#50505f,#2E313A,#1B334C);
 }
 
 #TimeVid{
