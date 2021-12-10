@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bioForm.css">
+    <title>BioFORM</title>
+</head>
+
+<body>
+    <div class="bio_form">
+        <div class="heading">
+            <p class="h">BIO FORM</p>
+        </div>
+        <form class="inp_form" action="">
+            <div class="box">
+                <div class="blank"></div>
+            <div class="img">
+            <input class="file-upload-input in" type="file" onchange="readURL(this)" accept="Image/*"><br>    
+        </div>
+        
+    </div>
+            <label class="left" for="uname">NAME</label>
+            <input class="inp" type="text" name="" id="uname" required ><br>
+
+            <label for="reg" class="left">REG NO</label>
+            <input type="number" class="inp" name="" id="reg" required><br>
+            
+            <label class="left" for="course">COURSE</label>
+            <select class="inp crs" name="COURSE" id="course">
+                <option value="BESE24">BESE24</option>
+                <option value="BESE25">BESE25</option>
+                <option value="BESE26">BESE26</option>
+                <option value="BESE27">BESE27</option>
+                <option value="BEE55">BEE55</option>
+                <option value="BEE56">BEE56</option>
+                <option value="BEE57">BEE57</option>
+                <option value="BEE58">BEE58</option>
+            </select>
+            <br>
+
+            <label  class="left" for="fname">FATHER NAME</label>
+            <input type="text" class="inp" name="" id="fname">
+            <br>
+            <label class="left" for="mname">MOTHER NAME</label>
+            <input type="text" class="inp" name="" id="mname">
+            <br>
+            <label class="left" for="cnic">CNIC</label>
+            <input type="number" class="inp" name="" id="cnic" required>
+            <br>
+            <label class="left" for="emails">EMAIL</label>
+            <input type="email" class="inp" name="" id="emails" required>
+            <br>
+            <label class="left" for="city">CITY</label>
+            <input type="text" class="inp" name="" id="city">
+            <br>
+            <label for="phone" class="left">PHONE NUMBER</label>
+            <input type="number" class="inp" name="" id="phone" required>
+            <br>
+            <label class="left" for="province">PROVINCE</label>
+            <select name="PROVINCE" id="province" class="inp prv crs">
+                <option class="bal" value="BALOCHISTAN">BALOCHISTAN</option>
+                <option class="pun" value="PUNJAB">PUNJAB</option>
+                <option class="sin" value="SINDH">SINDH</option>
+                <option class="kpk" value="KPK">KPK</option>
+                <option class="fed" value="FEDERAL">FEDERAL</option>
+            </select>
+            <br>
+            
+            
+            <label for="finc" class="left">FATHER INCOME</label>
+            <select name="FATHER INCOME" id="finc" class="inp crs">
+                <option value="20000-35000">20000-35000</option>
+                <option value="35000-50000">35000-50000</option>
+                <option value="50000-75000">50000-75000</option>
+                <option value="75000-100000">75000-100000</option>
+                <option value="above 100000">above 100000</option>
+            </select>
+            <br>
+            <label  class="left" for="">GENDER</label>
+            <label class="rc" for="male">MALE</label>
+            <input type="radio" name="gd" id="male" value="Male">
+            <label class="rc" for="female">FEMALE</label>
+            <input type="radio" name="gd" id="female" value="Female">
+            <label class="rc" for="other">OTHER</label>
+            <input type="radio" name="gd" id="other" value="Other">
+            <br>
+            <label for="" class="left">FATHER'S STATUS</label>
+            <label class="rc" for="alive">ALIVE</label>
+            <input type="radio" name="st" id="alive" value="ALIVE">
+
+            <label class="rc" for="dc">  DECEASED </label>
+            <input  type="radio" name="st" id="dc" value="DECEASED">
+            <br>
+            <label for="ad" class="left">ADDRESS</label>
+            <textarea name="" class="adr" id="ad" cols="100" rows="5"></textarea><br>
+           <div class="afd">
+            <input class="chk" type="checkbox" name="" id="" required>
+            <label class="lbl">I hereby declare that all above information given is true.</label><br>
+           </div>
+            <div class="btn">
+                <button class="sub" type="submit">submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
