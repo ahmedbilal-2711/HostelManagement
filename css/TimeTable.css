@@ -23,6 +23,7 @@ body{
     font-size: 32px;
 }
 .title:hover{
+    color: orange;
 }
 
 table{
@@ -44,7 +45,7 @@ th{
     font-style: normal;
     font-weight: bold;
     font-size: 35px;
-    /* background-color:  rgb(114, 191, 221); */
+    background-color: rgba(218, 165, 32, 0.747);
 }
 tr{
     border: 1px solid black;
