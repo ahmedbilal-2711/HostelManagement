@@ -1,6 +1,7 @@
 body{
     background-color: #f5f5f5;
-    background-image: linear-gradient(to right, #1E2738,#202020,#262641,#50505f,#2E313A,#1B334C);
+    background-image: linear-gradient(to right, #1E2738,#202020,#50505f,#262641,#2E313A,#1B334C);
+    padding-right: 20px;
 }
 
 #TimeVid{
@@ -22,10 +23,10 @@ body{
     font-size: 32px;
 }
 .title:hover{
-    color:  skyblue;
 }
 
 table{
+    background-color: rgba(255, 255, 255, 0.637);
     border: 1px solid black;
     width: 100%;
     justify-items : center;
@@ -43,7 +44,7 @@ th{
     font-style: normal;
     font-weight: bold;
     font-size: 35px;
-    background-color:  rgb(114, 191, 221);
+    /* background-color:  rgb(114, 191, 221); */
 }
 tr{
     border: 1px solid black;
