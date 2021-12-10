@@ -1,110 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bioForm.css">
-    <title>BioFORM</title>
+    <link rel="stylesheet" href="/css/bioform.css">
+    <title>Registration Form For Hostel</title>
 </head>
-
 <body>
-    <div class="bio_form">
-        <div class="heading">
-            <p class="h">BIO FORM</p>
+    <div id="FormTitle">
+        <h3>
+            Hostel Registration Form
+        </h3>
+    </div>
+    <form action="/" class="grid-container">
+        <div class="item">
+            <label for="name" class="heading">Name:</label>
+            <input type="text" class="inputfield" id="nameinput" placeholder="Enter Your Name">
         </div>
-        <form class="inp_form" action="">
-            <div class="box">
-                <div class="blank"></div>
-            <div class="img">
-            <input class="file-upload-input in" type="file" onchange="readURL(this)" accept="Image/*"><br>    
+        <br>
+        <div class="item">
+            <label for="fathername" class="heading">Father's Name:</label>
+            <input type="text" class="inputfield" id="fnameinput" placeholder="Enter Your Father Name">
+        </div>
+        <br>
+        <div class="item">
+            <label for="semester" class="heading">Semester:</label>
+            <input type="text" class="inputfield" id="seminput" placeholder="Enter Your Semester Number">
+        </div>
+        <br>
+        <div class="item">
+            <label for="discipline" class="heading">Discipline:</label>
+            <input type="text" class="inputfield" id="disinput" placeholder="Enter Your Discipline">
+        </div>
+        <br>
+        <div class="item">
+            <label for="meritno" class="heading">Nust Merit No:</label>
+            <input type="text" class="inputfield" id="meritinput" placeholder="Enter Your Merit No">
+        </div>
+        <br>
+        <div class="item">
+            <label for="cnic" class="heading">CNIC No:</label>
+            <input type="text" class="inputfield" id="cnicinput" placeholder="Enter Your CNIC No">
+        </div>
+        <br>
+        <div class="item">
+            <label for="DOB" class="heading">Date of Birth:</label>
+            <input type="date" class="inputfield" id="dobinput" placeholder="Enter Your DOB">
+        </div>
+        <br>
+        <div class="item">
+            <label for="paddress" class="heading">Permanent Address:</label>
+            <input type="text" class="inputfield" id="paddinput" placeholder="Enter Your PermanentAddress">
+        </div>
+        <br>
+        <div class="item" id="address">
+            <!-- <label for="same"id="sameasabove">Same As Above</label>
+            <input type="checkbox" class="chb"><br> -->
+            <label for="Postaladdress" class="heading">Postal Address:</label> 
+            <input type="text" class="inputfield" id="paddinput" placeholder="Enter Your Postal Address">
+        </div>
+        <br>
+        <div class="item">
+            <label for="fno" class="heading">Father's No</label>
+            <input type="text" class="inputfield" id="fnoinput" placeholder="Enter Your Father's No">
+        </div>
+        <br>
+        <div class="item">
+            <label for="pno" class="heading">Personal No:</label>
+            <input type="text" class="inputfield" id="noinput" placeholder="Enter Your Personal No">
+        </div>
+        <br>
+        <div class="item">
+            <label for="residence" class="heading">Residence:</label>
+            <input type="text" class="inputfield" id="residenceinput" placeholder="Enter Your Residence">
+        </div>
+        <br>
+        <div class="item">
+            <label for="domicile" class="heading">Domicile:</label>
+            <input type="text" class="inputfield" id="domicileinput" placeholder="Domicile district">
+        </div>
+        <br>
+        <div class="item">
+            <label for="email" class="heading">Email:</label>
+            <input type="email" class="inputfield" id="emailinput" placeholder="Enter Your Email">
         </div>
         
-    </div>
-            <label class="left" for="uname">NAME</label>
-            <input class="inp" type="text" name="" id="uname" required ><br>
-
-            <label for="reg" class="left">REG NO</label>
-            <input type="number" class="inp" name="" id="reg" required><br>
-            
-            <label class="left" for="course">COURSE</label>
-            <select class="inp crs" name="COURSE" id="course">
-                <option value="BESE24">BESE24</option>
-                <option value="BESE25">BESE25</option>
-                <option value="BESE26">BESE26</option>
-                <option value="BESE27">BESE27</option>
-                <option value="BEE55">BEE55</option>
-                <option value="BEE56">BEE56</option>
-                <option value="BEE57">BEE57</option>
-                <option value="BEE58">BEE58</option>
-            </select>
-            <br>
-
-            <label  class="left" for="fname">FATHER NAME</label>
-            <input type="text" class="inp" name="" id="fname">
-            <br>
-            <label class="left" for="mname">MOTHER NAME</label>
-            <input type="text" class="inp" name="" id="mname">
-            <br>
-            <label class="left" for="cnic">CNIC</label>
-            <input type="number" class="inp" name="" id="cnic" required>
-            <br>
-            <label class="left" for="emails">EMAIL</label>
-            <input type="email" class="inp" name="" id="emails" required>
-            <br>
-            <label class="left" for="city">CITY</label>
-            <input type="text" class="inp" name="" id="city">
-            <br>
-            <label for="phone" class="left">PHONE NUMBER</label>
-            <input type="number" class="inp" name="" id="phone" required>
-            <br>
-            <label class="left" for="province">PROVINCE</label>
-            <select name="PROVINCE" id="province" class="inp prv crs">
-                <option class="bal" value="BALOCHISTAN">BALOCHISTAN</option>
-                <option class="pun" value="PUNJAB">PUNJAB</option>
-                <option class="sin" value="SINDH">SINDH</option>
-                <option class="kpk" value="KPK">KPK</option>
-                <option class="fed" value="FEDERAL">FEDERAL</option>
-            </select>
-            <br>
-            
-            
-            <label for="finc" class="left">FATHER INCOME</label>
-            <select name="FATHER INCOME" id="finc" class="inp crs">
-                <option value="20000-35000">20000-35000</option>
-                <option value="35000-50000">35000-50000</option>
-                <option value="50000-75000">50000-75000</option>
-                <option value="75000-100000">75000-100000</option>
-                <option value="above 100000">above 100000</option>
-            </select>
-            <br>
-            <label  class="left" for="">GENDER</label>
-            <label class="rc" for="male">MALE</label>
-            <input type="radio" name="gd" id="male" value="Male">
-            <label class="rc" for="female">FEMALE</label>
-            <input type="radio" name="gd" id="female" value="Female">
-            <label class="rc" for="other">OTHER</label>
-            <input type="radio" name="gd" id="other" value="Other">
-            <br>
-            <label for="" class="left">FATHER'S STATUS</label>
-            <label class="rc" for="alive">ALIVE</label>
-            <input type="radio" name="st" id="alive" value="ALIVE">
-
-            <label class="rc" for="dc">  DECEASED </label>
-            <input  type="radio" name="st" id="dc" value="DECEASED">
-            <br>
-            <label for="ad" class="left">ADDRESS</label>
-            <textarea name="" class="adr" id="ad" cols="100" rows="5"></textarea><br>
-           <div class="afd">
-            <input class="chk" type="checkbox" name="" id="" required>
-            <label class="lbl">I hereby declare that all above information given is true.</label><br>
-           </div>
-            <div class="btn">
-                <button class="sub" type="submit">submit</button>
-            </div>
-        </form>
+    </form>
+    <div class="button">
+        <button type="button" id="submitbutton">Submit</button>
     </div>
 </body>
-
 </html>

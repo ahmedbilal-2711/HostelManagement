@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/ExpenseCalculator.css">
+    <title>Expense Calculator</title>
+</head>
+
+<body>
+    <div class="title">
+        <div>
+            <video autoplay muted loop id="bgCalcVid">
+                <source src="../images/bgCalc.mp4" type="video/mp4">
+            </video>
+        </div>
+        <h3 id="heading">Expense Calculator</h3>
+    </div>
+<div class="flex-container">
+    <div id="flex1">
+        <div class="input">
+            <label class="enterHead" id="Expense" for="Expense">Expense:</label>
+            <input type="text" class="tableInput" id="ExpenseInput" name="Expense" placeholder="Enter the Amount">
+            <br><br><br>
+        </div>
+        <div class="input">
+            <label class="enterHead" id="Amount" for="Amount">Amount:</label>
+            <input type="text" class="tableInput" id="AmountInput" name="Amount" placeholder="Enter the Expense">
+            <br><br><br>
+        </div>
+        <button type="button" id="submitbutton">Add</button>
+    </div>
+    <div id="flex2">
+        <table>
+            <tr>
+                <th colspan="2">Expenses History</th>
+            </tr>
+            <tr>
+                <th>Expenses</th>
+                <th>Amount (Rs)</th>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 0px 15px 0px 15px;
+}
+
+#info{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px 50px 5px 50px;
+    border: 1px solid grey;
+    width: 40%;
+}
+
+#right{
+    background-color: grey;
+    padding: 5px 15px 5px 15px;
+}
+
+#imgStd{
+    border-radius: 50% 50%;
+    height: 160px;
+    width: 160px;
+    border: 5px solid goldenrod;
+    box-shadow: 5px 3px 15px black;
+}
+
+/* Bars */
+#barChart{
+    border: 2px solid red;
+    display: flex;
+    flex-flow: row wrap;
+    width: 1250px;
+    background-color: grey;
+}
+
+#heights>li{
+    position: relative;
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+#heights{
+    /* border-right: 1px solid green; */
+}
+
+#bars>li{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#bars>li>span{
+    width: 75px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#bars{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 95%;
+    position: relative;
+    bottom: 0px;
+}
+
+#bars>li::after{
+    content: attr(dataPerc)'%';
+    color: white;
+    position: relative;
+
+}
+
+.bar{
+    background-color: red;
+    display: table-cell;
+    height: 20px;
+    width: 100%;
+}

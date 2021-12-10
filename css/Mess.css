@@ -1,0 +1,65 @@
+body{
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to right, #1E2738,#202020,#50505f,#262641,#2E313A,#1B334C);
+    padding-right: 20px; 
+}
+
+#Heading{
+    display: flex;
+    flex-flow: row wrap;
+    color: black;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#bgCalcVid{
+    height: 100px;
+    width: 100px;
+}
+
+table{
+    border: 1px solid black;
+    width: 98%;
+    height: 98%;
+    justify-items : center;
+    border-collapse: collapse;
+    
+}
+
+th{
+    height:45px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: black;
+    background-color: rgba(218, 165, 32, 0.747);
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+}
+tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
+td{ 
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}

@@ -5,16 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/navBar.css">
+    <link rel="stylesheet" media="screen and (max-width:427px)" href="../css/navBarRes.css">
     <title>Hostify</title>
 </head>
 <body>
-    <nav id="navBar">
-        <ul>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">Test</a></li>
-        </ul>
-    </nav>
+    <div id="topBar">
+        <img src="../images/icon.png" alt="Icon" class="topIcons">
+        <div>
+            <input type="text" name="search" id="searchBox"Search" >
+            <!-- <button><img src="../images/search.png" class="topIcons" id="searchIcon" alt="Search"></button> -->
+        </div>
+        <a href="../html/index.html"><img src="../images/signout.png" alt="Sign Out" class="topIcons" id="signout"></a>
+    </div>
+    <div id="sideBox">
+        <nav id="navBar"> 
+            <ul id="navBarUl">
+                <div id="headingDashBoard">
+                    <img src="../images/dashboard.png" id="dashImg" alt="DashBoard">
+                    <h4>DASH BOARD</h4>
+                </div>
+                <li><a href="#"><img src="../images/dashboard.png" alt="Img" class="topIcons DashOptions"> <p>Test</p></a></li>
+                <li><a href="#"><img src="../images/dashboard.png" alt="Img" class="topIcons DashOptions"> <p>Test</p></a></li>
+                <li><a href="#"><img src="../images/dashboard.png" alt="Img" class="topIcons DashOptions"> <p>Test</p></a></li>
+                <li><a href="#"><img src="../images/dashboard.png" alt="Img" class="topIcons DashOptions"> <p>Test</p></a></li>
+            </ul>
+        </nav>
+    </div>
+    <iframe src="../html/ExpenseCalculator.html" frameborder="0" style="width: 88%;height: 100% ;float: right; margin-left: 182px; position:fixed;top:56px;display: none;"></iframe>
+    <iframe src="../html/MessSchedule.html" frameborder="0" style="width: 88%;height: 100% ;float: right; margin-left: 182px; position:fixed;top:56px;display: none"></iframe>
+    <iframe src="../html/TimeTable.html" frameborder="0" style="width: 88%;height: 100% ;float: right; margin-left: 182px; position:fixed;top:56px;"></iframe>
+    <script src="../js/navBar.js"></script>
 </body>
 </html>
