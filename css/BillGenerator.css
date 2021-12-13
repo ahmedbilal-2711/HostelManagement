@@ -24,16 +24,14 @@ body{
 
 .input{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    
+    flex-direction: row; 
 }
 .flex-container{
     margin-top: 40px;
     display: flex;
     flex-direction: row;
     height: 100%;
+    justify-content: center;
 
 }
 .enterheading{
@@ -42,9 +40,7 @@ body{
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
-    display: flex;
-    justify-items: left;
-    align-items: left;
+    padding-left: 20px;
 
 }
 
@@ -69,7 +65,7 @@ table{
     margin-top: 40px;
     border: 1px solid black;
     border-collapse: collapse;
-    width: 50%;
+    width: 75%;
 }
 
 th{
@@ -107,4 +103,38 @@ td{
     font-size: 20px;
     text-align: center;
     width: 30%;
+}
+
+@media (min-width:426px) and (max-width:768px){
+
+    .enterheading{
+        font-size:20px ;
+    }
+    .inputfield{
+        font-size: 20px;
+        height: 18px;
+    }
+    th{
+        font-size: 20px;
+    }
+    td{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:425px){
+    .enterheading{
+        font-size:17px ;
+    }
+    .inputfield{
+        font-size: 15px;
+        height: 13px;
+        width: 100px;
+    }
+    th{
+        font-size: 15px;
+    }
+    td{
+        font-size: 13px;
+    }
 }
