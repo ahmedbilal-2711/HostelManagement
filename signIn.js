@@ -60,7 +60,7 @@ database
     console.log(err);
   });
   
-/* let express = require("express");
+let express = require("express");
 let app = express();
 app.use(express.urlencoded({extented:true}));
 
@@ -75,12 +75,11 @@ app.post('/',function (req,res) {
 
 app.get('/',function(req,res){
     res.sendFile(__dirname + "/html/index.html");
-
 });
 
 app.listen(5540, function(){
-    console.log("kdjfkjfkd");
-}); */
+    console.log("running");
+});
 
 
 
