@@ -14,10 +14,10 @@ body{
     font-size: 32px;
     justify-content: center;
     align-items: center;
-    
+    gap: 20px;
 }
 
-#bgCalcVid{
+#bgMessVid{
     height: 100px;
     width: 100px;
 }
@@ -26,7 +26,7 @@ table{
     border: 1px solid black;
     width: 98%;
     height: 98%;
-    justify-items : center;
+    margin-left: 15px;
     border-collapse: collapse;
     
 }
@@ -62,4 +62,45 @@ td{
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
+}
+@media (min-width:426px) and (max-width:768px) {
+    #heading{
+        gap: 10px;
+    }
+    #bgMessVid{
+        height: 100px;
+        width: 100px;
+    }
+    table{
+    margin-left: 40px;
+    width: 90%;
+    height: 50%;
+    }
+    th{
+        font-size: 22px;
+    }
+    td{
+        font-size: 17px;
+    }
+}
+
+@media (max-width:425px) {
+    #heading{
+        gap: 10px;
+    }
+    #bgMessVid{
+        height: 80px;
+        width: 100px;
+    }
+    table{
+    margin-left: 20px;
+    width: 90%;
+    height: 30%;
+    }
+    th{
+        font-size: 17px;
+    }
+    td{
+        font-size: 13px;
+    }
 }
