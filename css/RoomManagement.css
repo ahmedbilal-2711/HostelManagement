@@ -25,42 +25,36 @@ body{
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 40px;
-}
-
-.room{
+    font-size: 5rem;
+}   
+.flatheading{
     display: flex;
-    margin-top: 5px;
-    font-size: 20px;
-    margin-left:40px;
-    flex-wrap: wrap;
-    width: 250px;
-    height: 180px;  
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 10px 10px #202020;   
-
+    gap: 20px;
 }
-
-.items{
+.items{ 
     display: flex;
+    flex-flow: column wrap;
+    margin-left: 40px;
+    width: 50vmax;
     height: 180px;
-    width: 1200px;
-    box-shadow: 20px,20px,20px,20px darkgrey;
-    margin-bottom: 40px;
-    margin-left: 20px;
-
-       
+    text-align: center;
+    justify-content: center;
+    box-shadow: 1px 1px 10px 10px #ce8a5d;
+    margin-bottom: 10px;
 }
 .heading{
-    display: flex;
-    margin-left: 50px;
-    font-size: 35px;
+    font-size: 5rem;
     color: orange;
     font-weight: bold;
-    height: 180px;
-    width: 220px;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 1px 10px 10px #ce8a5d;
+} 
+.roomflex{
+    display: none;
+}
+.room{
+    display: none;
 }
