@@ -23,6 +23,7 @@ body{
 }
 
 table{
+    margin-top: 20px;
     border: 1px solid black;
     width: 98%;
     height: 98%;
