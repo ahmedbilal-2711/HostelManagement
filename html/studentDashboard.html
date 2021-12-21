@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/studentDashboard.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js" integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Home Page</title>
 </head>
 <body>
@@ -26,27 +28,9 @@
         </div>
     </div>
     <div id="barChart">
-        <ul id="heights">
-            <li>25</li>
-            <li>20</li>
-            <li>15</li>
-            <li>10</li>
-            <li>5</li>
-        </ul>
-        <ul id="bars">
-            <li><div class="bar" dataPerc="60%"></div><span>January</span></li>
-            <li><div class="bar" dataPerc="50%"></div><span>Febuary</span></li>
-            <li><div class="bar" dataPerc="70%"></div><span>March</span></li> 
-            <li><div class="bar" dataPerc="20%"></div><span>April</span></li> 
-            <li><div class="bar" dataPerc="50%"></div><span>May</span></li>
-            <li><div class="bar" dataPerc="60%"></div><span>June</span></li> 
-            <li><div class="bar" dataPerc="70%"></div><span>July</span></li> 
-            <li><div class="bar" dataPerc="100%"></div><span>August</span></li>
-            <li><div class="bar" dataPerc="80%"></div><span>September</span></li>
-            <li><div class="bar" dataPerc="80%"></div><span>October</span></li>
-            <li><div class="bar" dataPerc="90%"></div><span>November</span></li>
-            <li><div class="bar" dataPerc="80%"></div><span>December</span></li>
-        </ul>
+        <canvas id="monthlyBills"></canvas>
     </div>
 </body>
+<script src="../js/barChart.js"></script>
+<!-- <script src="../js/data.js"></script> -->
 </html>
