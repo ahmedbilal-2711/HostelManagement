@@ -24,28 +24,24 @@ body{
 
 .input{
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-
+    flex-direction: row; 
 }
 .flex-container{
     margin-top: 40px;
     display: flex;
     flex-direction: row;
     height: 100%;
-    align-items: center;
-    justify-content: left;
-    margin-left: 40px;
+    justify-content: center;
+
 }
 .enterheading{
-    margin-left: 150px;
     color:orange;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
-    display: flex;
-    flex-flow: column wrap;
+    padding-left: 20px;
+
 }
 
 .inputfield{
@@ -55,10 +51,10 @@ body{
     font-weight: bold;
     border-radius: 8px;
     border-color: black;
-    width: 265px; 
+    width: 25vmax; 
     height: 25px;
     padding: 2px 5px 2px 5px;
-    margin-left: 10px;
+
 }
 .table{
     margin-left: auto;
@@ -69,7 +65,7 @@ table{
     margin-top: 40px;
     border: 1px solid black;
     border-collapse: collapse;
-    width: 50%;
+    width: 75%;
 }
 
 th{
@@ -83,7 +79,6 @@ th{
     font-style: normal;
     font-weight: bold;
     font-size: 25px;
-    text-justify: left;
     text-align: center;
 }
 tr{
@@ -107,4 +102,38 @@ td{
     font-size: 20px;
     text-align: center;
     width: 30%;
+}
+
+@media (min-width:426px) and (max-width:768px){
+
+    .enterheading{
+        font-size:20px ;
+    }
+    .inputfield{
+        font-size: 20px;
+        height: 18px;
+    }
+    th{
+        font-size: 20px;
+    }
+    td{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:425px){
+    .enterheading{
+        font-size:17px ;
+    }
+    .inputfield{
+        font-size: 15px;
+        height: 13px;
+        width: 100px;
+    }
+    th{
+        font-size: 15px;
+    }
+    td{
+        font-size: 13px;
+    }
 }

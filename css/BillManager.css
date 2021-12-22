@@ -1,0 +1,82 @@
+*{
+    padding:0;
+    margin: 0;
+}
+
+body{
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to right, #1E2738,#202020,#50505f,#262641,#2E313A,#1B334C);
+    padding-right: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+.heading{
+    display: flex;
+    flex-flow: row wrap;
+    color: orange;
+    padding: 30px 0px 0px 0px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+}
+.flex-container{
+    padding-top: 30px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+
+}
+
+#inpBox{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+}
+.enterheading{
+    margin-top: 20px;
+    color:orange;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.inputfield{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    color:black;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    border-radius: 8px;
+    border-color: black;
+    width: 40vmax; 
+    height: 25px;
+    padding: 2px 5px 2px 5px;
+}
+.addbtn{
+    padding-top: 80px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    border-radius: 10px; 
+    padding: 5px;
+}
+
+.addbtn:hover{
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+}

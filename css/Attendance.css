@@ -8,48 +8,47 @@ body{
     padding-right: 20px;
 }
 
-#title{
+.title{
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    flex-flow: nowrap;
     color: orange;
-    padding: 30px 0px 0px 0px;
-    align-items: center;
     justify-content: center;
     text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 2rem;
 }
+
 #AttendanceVid{
-    margin-top: -20px;
-    margin-right: 250px;
     height: 150px;
-    width: 200px;
+    width: 150px;
 }
 .flex-container{
 
-    margin-top: 30px;
-    margin-left: 50px;
+    margin-top: 10px;
+    margin-left: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content:center;
+    justify-content: center;
+    align-items:left;
+    gap: 10px;
 }
 .flex{
     display: flex;
-    margin-left: 70px;
-    margin-top: 30px;
+    margin-top: 10px;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 350px;
-    height: 150px;
+    width: 300px;
+    height: 120px;
     box-shadow: 0px 0px 5px 5px #ce8a5d;
 
 }
 .heading{
     display: flex;
-    font-size: 35px;
+    font-size: 28px;
     color: orange;
     font-weight: bold;
     text-align: left;
@@ -64,4 +63,24 @@ body{
     max-width: 100%;
     height: 20px;
     border-radius: 10px;
+}
+@media (max-width:768px){
+    .flex{
+        width: 160px;
+        margin-left: 30px;        
+    }
+    .heading{
+        font-size: 23px;
+    }
+
+}
+@media (max-width:425px){
+    .flex{
+        width: 220px;
+        margin-left: 10px;        
+    }
+    .heading{
+        font-size: 25px;
+    }
+
 }
