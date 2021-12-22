@@ -88,6 +88,7 @@ function signIn() {
     c[4].innerHTML='Create Account';
     console.log(c[0]);
 }
+
 function signUp() {
     box.style.boxShadow='0px 0px 18px 14px rgba(37, 44, 38, 0.493)';
     box.style.backgroundColor='rgba(37, 44, 38, 0.393)';

@@ -38,7 +38,17 @@ body{
 }
 
 #barChart{
-    width: 50%;
+    width: 45%;
     height: 50%;
 
+}
+#pieChart{
+    width: 25%;
+    height: 25%;
+}
+#charts{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }

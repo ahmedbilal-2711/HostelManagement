@@ -1,38 +1,4 @@
-/* const { request } = require('http');
-const sql = require('mssql');
-const config = {
-    servername:'AHMED\\SQLEXPRESS',
-    username:'HostelDb',
-    password:'hmdb',
-    database:'SampleDataLab',
-    port:1434
-}
-
-function getData() {
-    // var conn = new sql.Connection(config);
-    sql.connect(config,function (err) {
-        if (err) {
-            console.log(err);
-            return;
-        }
-        else{
-            var req = new sql.Request();
-            req.query('SELECT * from Employee',function(err,data){
-                if (err) {
-                    console.log(err);
-                }
-                else{
-                    console.log(data);
-                }
-                conn.close();
-            })
-    
-        }
-    });
-}
-
-getData(); */
-
+/* // Database Connection
 const { default: knex } = require("knex");
 var sql = require("mssql");
 var config = {
@@ -58,26 +24,29 @@ database
 })
   .catch((err) => {
     console.log(err);
-  });
+  }); */
   
+// BackEnd
 let express = require("express");
 let app = express();
 app.use(express.urlencoded({extented:true}));
 
 app.use(express.static(__dirname));
 
+app.get('/',function(req,res){
+     res.sendFile(__dirname + "/html/index.html");
+});
+
 app.post('/',function (req,res) {
+  console.log(" brwa");
     console.log(req.body);
     console.log(req.body.em);
     console.log(req.body.pass);
-    res.sendFile('../html/bioForm.html')
+    //res.sendFile('../html/bioForm.html')
 });
 
-app.get('/',function(req,res){
-    res.sendFile(__dirname + "/html/index.html");
-});
 
-app.listen(5540, function(){
+app.listen(3000, function(){
     console.log("running");
 });
 
