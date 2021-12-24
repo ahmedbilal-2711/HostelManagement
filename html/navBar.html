@@ -24,16 +24,21 @@
                     <img src="../images/dashboard.png" id="dashImg" alt="DashBoard">
                     <h4>DASH BOARD</h4>
                 </div>
-                <li><a href="#"><img src="../images/dashboard.png" alt="Img" class="topIcons DashOptions"> <p>Test</p></a></li>
-                <li><a href="#"><img src="../images/dashboard.png" alt="Img" class="topIcons DashOptions"> <p>Test</p></a></li>
-                <li><a href="#"><img src="../images/dashboard.png" alt="Img" class="topIcons DashOptions"> <p>Test</p></a></li>
-                <li><a href="#"><img src="../images/dashboard.png" alt="Img" class="topIcons DashOptions"> <p>Test</p></a></li>
+                <div id="options">
+                    <li><a class='aModules' href="#"><img src="../images/dashboard.png" alt="Img" class="topIcons DashOptions"> <p class="modules">Home</p></a></li>
+                    <li><a class='aModules' href="#"><img src="../images/dashboard.png" alt="Img" class="topIcons DashOptions"> <p class="modules">Expense Calculator</p></a></li>
+                    <li><a class='aModules' href="#"><img src="../images/dashboard.png" alt="Img" class="topIcons DashOptions"> <p class="modules">Mess Schedule</p></a></li>
+                    <li><a class='aModules' href="#"><img src="../images/dashboard.png" alt="Img" class="topIcons DashOptions"> <p class="modules">Bill Generator</p></a></li>
+                    <li><a class='aModules' href="#"><img src="../images/dashboard.png" alt="Img" class="topIcons DashOptions"> <p class="modules">Time Table</p></a></li>
+                </div>
             </ul>
         </nav>
     </div>
-    <iframe src="../html/ExpenseCalculator.html" frameborder="0" style="width: 88%;height: 100% ;float: right; margin-left: 182px; position:fixed;top:56px;display: none;"></iframe>
-    <iframe src="../html/MessSchedule.html" frameborder="0" style="width: 88%;height: 100% ;float: right; margin-left: 182px; position:fixed;top:56px;display: none"></iframe>
-    <iframe src="../html/TimeTable.html" frameborder="0" style="width: 88%;height: 100% ;float: right; margin-left: 182px; position:fixed;top:56px;"></iframe>
+    <iframe class="pages" id="home" src="../html/studentDashboard.html" frameborder="0" style="width: 88%;height: 100% ;float: right; margin-left: 182px; position:fixed;top:56px;display: none""></iframe>
+    <iframe class="pages" id="ec" src="../html/ExpenseCalculator.html" frameborder="0" style="width: 88%;height: 100% ;float: right; margin-left: 182px; position:fixed;top:56px;display:none"></iframe>
+    <iframe class="pages" id="mess" src="../html/MessSchedule.html" frameborder="0" style="width: 88%;height: 100% ;float: right; margin-left: 182px; position:fixed;top:56px;display: none"></iframe>
+    <iframe class="pages" id="bg" src="../html/BillGenerator.html" frameborder="0" style="width: 88%;height: 100% ;float: right; margin-left: 182px; position:fixed;top:56px;display: none""></iframe>
+    <iframe class="pages" id="tt" src="../html/TimeTable.html" frameborder="0" style="width: 88%;height: 100% ;float: right; margin-left: 182px; position:fixed;top:56px;display: none""></iframe>
     <script src="../js/navBar.js"></script>
 </body>
 </html>

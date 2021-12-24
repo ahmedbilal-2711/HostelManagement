@@ -118,20 +118,24 @@ a{
     color: white;
     transition: background-color;
     transition-duration: 800ms;
-    width: 60%;
+    width: 85%;
     height: 100%;
-    padding: 0px 10px 0px 0px;
     text-align: center;
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px;
     float: right;
 }
 
+p{
+    font-size: 1.1rem;
+    padding: 0px 10px 0px 0px;
+    width: 95%;
+    font-weight: 545;
+}
+
 #navBar li>a:hover{
-    /* color: black; */
     cursor: pointer;
-    /* color: black; */
-    background-color: rgba(0, 0, 0, 0.301);
+    background-color: rgba(0, 0, 0, 0.452);
 }
 
 /* Animations */

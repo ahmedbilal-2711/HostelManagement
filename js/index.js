@@ -31,12 +31,6 @@ signCardTxt.addEventListener('click',()=>{
     }
 });
 
-c[3].addEventListener('click',()=>{
-    if (c[3].innerHTML==='Sign Up'){
-        console.log("dfkdlfjk");
-        window.open("../html/bioForm.html",'_blank');
-    }
-});
 
 
 /* document.getElementById("cancel").addEventListener("click",()=>{

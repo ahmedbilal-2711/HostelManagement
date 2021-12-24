@@ -42,7 +42,7 @@ app.post('/',function (req,res) {
     console.log(req.body);
     console.log(req.body.em);
     console.log(req.body.pass);
-    //res.sendFile('../html/bioForm.html')
+    res.sendFile(__dirname + '/html/bioForm.html');
 });
 
 
