@@ -86,11 +86,14 @@ function signIn() {
     c[0].children[0].innerHTML='Sign In';
     c[3].innerHTML="Sign In";
     c[4].innerHTML='Create Account';
+    console.log(c[0]);
 }
+
 function signUp() {
     box.style.boxShadow='0px 0px 18px 14px rgba(37, 44, 38, 0.493)';
     box.style.backgroundColor='rgba(37, 44, 38, 0.393)';
     c[0].children[0].innerHTML='Sign Up';       
     c[3].innerHTML="Sign Up";
     c[4].innerHTML='Sign In';
+    console.log(c[1]);
 }

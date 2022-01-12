@@ -5,6 +5,7 @@
 
 body{
     padding: 0px 15px 0px 15px;
+    background-image: linear-gradient(to right, #1E2738,#202020,#50505f,#262641,#2E313A,#1B334C);
 }
 
 #info{
@@ -14,7 +15,8 @@ body{
     align-items: center;
     padding: 5px 50px 5px 50px;
     border: 1px solid grey;
-    width: 40%;
+    width: 50%;
+    /* color: purple; */
 }
 
 #right{
@@ -30,57 +32,23 @@ body{
     box-shadow: 5px 3px 15px black;
 }
 
-/* Bars */
+#monthlyBills{
+    background-color: white;
+    color: black;
+}
+
 #barChart{
-    border: 2px solid red;
+    width: 45%;
+    height: 50%;
+
+}
+#pieChart{
+    width: 25%;
+    height: 25%;
+}
+#charts{
     display: flex;
     flex-flow: row wrap;
-    width: 1250px;
-    background-color: grey;
-}
-
-#heights>li{
-    position: relative;
-    list-style: none;
-    padding-bottom: 20px;
-}
-
-#heights{
-    /* border-right: 1px solid green; */
-}
-
-#bars>li{
-    list-style: none;
-    display: flex;
-    flex-flow: row wrap;
-}
-
-#bars>li>span{
-    width: 75px;
-    overflow: hidden;
-    text-align: center;
-}
-
-#bars{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-end;
-    justify-content: space-between;
-    width: 95%;
-    position: relative;
-    bottom: 0px;
-}
-
-#bars>li::after{
-    content: attr(dataPerc)'%';
-    color: white;
-    position: relative;
-
-}
-
-.bar{
-    background-color: red;
-    display: table-cell;
-    height: 20px;
-    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
 }
