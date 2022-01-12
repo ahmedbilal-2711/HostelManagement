@@ -26,19 +26,15 @@ body{
     width: 150px;
 }
 .flex-container{
-
-    margin-top: 10px;
-    margin-left: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items:left;
-    gap: 10px;
+    margin-left: 5 rem;
+    gap: 20px;
 }
 .flex{
     display: flex;
-    margin-top: 10px;
+    justify-content: left;
     flex-direction: row;
     flex-wrap: wrap;
     width: 300px;
