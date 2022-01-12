@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "chart": "^0.1.2",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "knex": "^0.95.14",
     "moment": "^2.29.1",
@@ -19,5 +19,8 @@
     "pg": "^8.7.1",
     "stream": "0.0.2",
     "tedious": "^14.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

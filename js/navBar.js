@@ -5,7 +5,9 @@ let orgHeightTop=document.getElementById("topBar").offsetHeight;
 document.getElementById("navBarUl").style.paddingBottom=(heightScreen-orgHeight-orgHeightTop)+"px";
 
 // let m = document.querySelector('.modules');
-
+window.addEventListener('load', () => {
+    fetch('http://localhost:3000/users').then(res => res.json()).then(data => console.log(data))
+})
 let m = document.querySelectorAll('.modules');
 let pages=document.getElementsByClassName('pages');
 console.log(m);
