@@ -1,6 +1,6 @@
     var mixed = document.getElementById('monthlyBills').getContext('2d');
     var pie = document.getElementById('attendance').getContext('2d');
-    console.log(new Date().getFullYear());
+    // console.log(new Date().getFullYear());
     // Chart.defaults.scale.ticks.beginAtZero=true;
     var mixedChart = new Chart(mixed,{
     type : 'bar',
@@ -70,3 +70,28 @@
       }
   }
   });
+
+
+// Attendance - in dashboard form
+function Calander() {
+  let timedate = new Date();
+  let date = timedate.toDateString();
+  let time = timedate.toTimeString().slice(0,8);
+  document.getElementById("time").innerHTML=time;
+  document.getElementById("date").innerHTML=date;
+}
+setInterval(Calander,1000);
+
+presentButton=document.getElementById("markPres");
+presentButton.addEventListener('click', (e)=>{
+  let timedate = new Date();
+  // console.log();
+  if (timedate.getHours()==23 && timedate.getMinutes()<59) {
+    console.log("dfjhdj");
+    document.getElementById("attendanceMark").style.borderColor='green';
+  }
+  else{
+    alert("You can mark your attendance between 2100hrs and 2200hrs")
+    document.getElementById("attendanceMark").style.borderColor='red';
+  }
+});
