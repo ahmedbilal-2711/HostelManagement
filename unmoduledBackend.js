@@ -39,11 +39,11 @@ app.get('/',function(req,res){
 
 
 // Validation done
-app.post('/signin',function (req,res) {
+app.post('/signin',async (req,res)=> {
     /* console.log(req.body);
     console.log(req.body.em);
     console.log(req.body.pass); */
-    database.connect().then(pool=>{
+    const result = await database.connect().then(pool=>{
         return pool.query`SELECT stdName from studentproj WHERE pass= ${req.body.pass} AND id=${req.body.em}`
     }).then(result=>{
         if (result.recordset.length>0) {
@@ -58,7 +58,7 @@ app.post('/signin',function (req,res) {
       });
 });
 
-
+// Attendance data for student dashboard
 app.get('/attendance', async (req, res) => {
     let id = '2@2.com';
     const result = await database.connect().then(pool=>{
@@ -69,8 +69,21 @@ app.get('/attendance', async (req, res) => {
         database.close();
     }).catch((err) => {
         console.log(err);
-      });
-    
+      }); 
+});
+
+// Monthly Bills stats for student Dashboard
+app.get('/monthlybillstats', async (req, res) => {
+    let id = '2@2.com';
+    const result = await database.connect().then(pool=>{
+        return pool.query`SELECT * from mbillsproj WHERE id=${id}`
+    }).then(result=>{
+        console.log( result);
+        res.send(result.recordset);
+        database.close();
+    }).catch((err) => {
+        console.log(err);
+      }); 
 });
 
 
