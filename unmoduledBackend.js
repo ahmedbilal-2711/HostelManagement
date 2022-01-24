@@ -5,7 +5,7 @@ var config = {
   user: "HostelDb",
   password: "hmdb",
   server: "AHMED\\SQLEXPRESS",
-  database: "SampleDataLab",
+  database: "hmdb",
   port: 1434,
   options: {
     encrypt: false,
@@ -25,68 +25,80 @@ var database = new sql.ConnectionPool(config);
   .catch((err) => {
     console.log(err);
   }); */
-  
+
 // BackEnd
 let express = require("express");
+const Null = require("tedious/lib/data-types/null");
 let app = express();
-app.use(express.urlencoded({extented:true}));
+app.use(express.urlencoded({ extented: true }));
 
 app.use(express.static(__dirname));
 
-app.get('/',function(req,res){
-     res.sendFile(__dirname + "/html/index.html");
+app.get("/", function (req, res) {
+  res.sendFile(__dirname + "/html/index.html");
 });
 
-
+var user;
 // Validation done
-app.post('/signin',async (req,res)=> {
-    /* console.log(req.body);
+app.post("/signin", async (req, res) => {
+  user = req.body.em;
+  /* console.log(req.body);
     console.log(req.body.em);
     console.log(req.body.pass); */
-    const result = await database.connect().then(pool=>{
-        return pool.query`SELECT stdName from studentproj WHERE pass= ${req.body.pass} AND id=${req.body.em}`
-    }).then(result=>{
-        if (result.recordset.length>0) {
-            res.sendFile(__dirname + "/html/navBar.html")
-        }
-        else{
-            res.sendFile(__dirname + "/html/index.html");
-        }
-        database.close();
-    }).catch((err) => {
-        console.log(err);
-      });
+  const result = await database
+    .connect()
+    .then((pool) => {
+      return pool.query`SELECT stdName from studentproj WHERE pass= ${req.body.pass} AND id=${req.body.em}`;
+    })
+    .then((result) => {
+      if (result.recordset.length > 0) {
+        res.sendFile(__dirname + "/html/navBarManagment.html");
+      } else {
+        res.sendFile(__dirname + "/html/index.html");
+      }
+      database.close();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 // Attendance data for student dashboard
-app.get('/attendance', async (req, res) => {
-    let id = '2@2.com';
-    const result = await database.connect().then(pool=>{
-        return pool.query`SELECT present,absent from attproj WHERE id=${id}`
-    }).then(result=>{
-        console.log( result);
-        res.send(result.recordset);
-        database.close();
-    }).catch((err) => {
-        console.log(err);
-      }); 
+app.get("/attendance", async (req, res) => {
+  let id = "2@2.com";
+  const result = await database
+    .connect()
+    .then((pool) => {
+      return pool.query`SELECT present,absent from attproj WHERE id=${id}`;
+    })
+    .then((result) => {
+      // console.log( result);
+      res.send(result.recordset);
+      database.close();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 // Monthly Bills stats for student Dashboard
-app.get('/monthlybillstats', async (req, res) => {
-    let id = '2@2.com';
-    const result = await database.connect().then(pool=>{
-        return pool.query`SELECT * from mbillsproj WHERE id=${id}`
-    }).then(result=>{
-        console.log( result);
-        res.send(result.recordset);
-        database.close();
-    }).catch((err) => {
-        console.log(err);
-      }); 
+app.get("/monthlybillstats", async (req, res) => {
+  let id = "2@2.com";
+  const result = await database
+    .connect()
+    .then((pool) => {
+      return pool.query`SELECT * from mbillsproj WHERE id=${id}`;
+    })
+    .then((result) => {
+      // console.log( result);
+      res.send(result.recordset);
+      database.close();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
-
-app.listen(3001, function(){
-    console.log("running");
+app.listen(3001, function () {
+  console.log("running");
 });

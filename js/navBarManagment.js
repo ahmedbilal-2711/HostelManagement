@@ -25,19 +25,19 @@ for (let i = 0; i < m.length; i++) {
       pages[3].style.display = "none";
       pages[4].style.display = "none";
       pages[1].style.display = "block";
-    } else if (m[i].innerHTML === "Mess Schedule") {
+    } else if (m[i].innerHTML === "Mess Manager") {
       pages[0].style.display = "none";
       pages[1].style.display = "none";
       pages[3].style.display = "none";
       pages[4].style.display = "none";
       pages[2].style.display = "block";
-    } else if (m[i].innerHTML === "Bill Generator") {
+    } else if (m[i].innerHTML === "Bill Manager") {
       pages[0].style.display = "none";
       pages[1].style.display = "none";
       pages[2].style.display = "none";
       pages[4].style.display = "none";
       pages[3].style.display = "block";
-    } else if (m[i].innerHTML === "Time Table") {
+    } else if (m[i].innerHTML === "Room Manager") {
       pages[0].style.display = "none";
       pages[1].style.display = "none";
       pages[2].style.display = "none";
