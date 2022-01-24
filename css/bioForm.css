@@ -49,15 +49,16 @@ body{
 .image_container{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 .sample_photo{
     border: 2px solid red;
+    width: 150px;
 }
-.image_uploader{
+/* .image_uploader{
     border: 2px solid red;
 
-}
+} */
 .inputfield{
     margin-top: 15px;
     font-size: 15px;
@@ -94,9 +95,6 @@ body{
     /* height: 40vmin; */
     /* font-size: 15px; */
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 .chk{
     display: inline-block;
     width: 50px;
@@ -104,23 +102,19 @@ body{
     margin-top: 5px;
     border: 2px solid red;
 }
-<<<<<<< HEAD
+
 .btn{
     /* border: 2px solid red; */
     margin: 20px;
     padding-top:20px ;
     padding-bottom: 20px;
-=======
+}
 #address{
->>>>>>> 4070f16fa5e1c533102151a9e6a282c296f60c54
+
     display: flex;
     flex-direction: row;
     justify-content: center;
-=======
-=======
->>>>>>> 61dec56b74014607d6f481b9ef5497037e9ce574
-=======
->>>>>>> 61dec56b74014607d6f481b9ef5497037e9ce574
+}
 /* #sameasabove{
     font-size: 18px;
     font-weight: bold;
