@@ -20,6 +20,7 @@ body{
     color: orange;
     padding: 30px 0px 0px 0px;
     align-items: center;
+
     justify-content: center;
     text-align: center;
     font-family: Roboto;
@@ -37,7 +38,7 @@ body{
 .items{ 
     display: flex;
     flex-flow: column wrap;
-    margin-left: 40px;
+    
     width: 50vmax;
     height: 180px;
     text-align: center;
@@ -52,9 +53,66 @@ body{
     justify-content: center;
     align-items: center;
 } 
-.roomflex{
-    display: none;
+/* .items:hover{
+    
+    width: 20vmax;
+    transform: translate(-200%);
+    
+    
+} */
+
+
+.flat-wrapper:hover{
+    display:flex;
+    justify-content: flex-start;
 }
+.flat-wrapper:hover .items{
+
+    margin-left: 10px;
+    width: 20vmax;
+    height: 130px;
+    /* margin-right:5vmax -40px; */
+    /* margin: 0 2.5vmax; */
+    /* transform: translate(-200%); */
+}
+.flat-wrapper:hover .heading{
+    font-size: 3rem;
+}
+.flat-wrapper:hover .room{
+    display:block;
+    width: 50vmax;
+
+}
+.flat-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* .items:hover .room{
+    display:flex;
+} */
 .room{
+    margin-bottom: 10px;
     display: none;
+    margin-left: 55px;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 1px 1px 10px 10px #ce8a5d;
+}
+.rooms{
+    padding-top: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+} 
+.sname{
+    font-size: 1.5rem;
+    color: orange;
+    font-weight: bold;
 }
