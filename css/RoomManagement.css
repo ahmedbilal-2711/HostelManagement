@@ -88,7 +88,12 @@ body{
     display: flex;
     justify-content: center;
 }
-
+.flat-wrapper:hover .roombox{
+    float: left;
+    width: 50%;
+    height: 130px;
+    box-shadow: 1px 1px 10px 10px #ce8a5d;
+}
 /* .items:hover .room{
     display:flex;
 } */
@@ -98,20 +103,16 @@ body{
     margin-left: 55px;
     text-align: center;
     justify-content: center;
-    box-shadow: 1px 1px 10px 10px #ce8a5d;
+
 }
 .rooms{
-    padding-top: 10px;
-    padding-left: 10px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    font-size: 2rem;
-    color: black;
+    
+    font-size: 1.65rem;
+    color: orange;
     font-weight: bold;
-    text-align: center;
 } 
 .sname{
+    padding-top: 20px;
     font-size: 1.5rem;
     color: orange;
     font-weight: bold;
