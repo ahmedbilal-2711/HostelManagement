@@ -48,10 +48,12 @@ app.post("/signin", async (req, res) => {
   const result = await database
     .connect()
     .then((pool) => {
-      return pool.query`SELECT stdName from studentproj WHERE pass= ${req.body.pass} AND id=${req.body.em}`;
+      return pool.query`SELECT FIRST_NAME from Hostelites WHERE PASSWORD= ${req.body.pass} AND ID=${req.body.em}`;
     })
     .then((result) => {
-      if (result.recordset.length > 0) {
+      if (result.recordset.length > 0 && req.body.em.includes("s")) {
+        res.sendFile(__dirname + "/html/navBar.html");
+      } else if (result.recordset.length > 0 && req.body.em.includes("m")) {
         res.sendFile(__dirname + "/html/navBarManagment.html");
       } else {
         res.sendFile(__dirname + "/html/index.html");
@@ -69,7 +71,7 @@ app.get("/attendance", async (req, res) => {
   const result = await database
     .connect()
     .then((pool) => {
-      return pool.query`SELECT present,absent from attproj WHERE id=${id}`;
+      return pool.query`SELECT count() from attproj WHERE id=${id}`;
     })
     .then((result) => {
       // console.log( result);
@@ -98,6 +100,8 @@ app.get("/monthlybillstats", async (req, res) => {
       console.log(err);
     });
 });
+
+// Student details fetched from database
 
 app.listen(3001, function () {
   console.log("running");
