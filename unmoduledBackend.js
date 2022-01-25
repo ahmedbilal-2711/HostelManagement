@@ -116,6 +116,10 @@ app.post("/signin", async (req, res) => {
     });
 });
 
+app.post("/manager", async (req, res) => {
+  console.log(req.body);
+});
+
 // Bring data from signup page and enter in database
 app.post("/signup", async (req, res) => {
   var sid = "";
