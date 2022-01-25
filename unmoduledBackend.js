@@ -66,7 +66,30 @@ app.get("/", function (req, res) {
 
 
 
+// Get the data from Database of TimeTable
 
+app.get("/timetable", async (req, res) => {
+    const result = await database
+      .connect()
+      .then((pool) => {
+        return pool.query`SELECT * from TimeTable`;
+      })
+      .then((result) => {
+        // console.log("running");
+        // console.log(result);
+        res.send(result.recordset);
+        database.close();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
+
+
+
+
+// Get the data from Database of Expense Calculator
 app.get("/expenses", async (req, res) => {
     const result = await database
       .connect()
@@ -131,7 +154,20 @@ app.post("/expenses", async (req, res) => {
 
 });
 
+app.post("/manager", async (req, res) => {
+    console.log(req);
+    const result = await database.connect().then(pool=>{
 
+       // return pool.query`exec ExpenseCalculator_Details ${req.body['Expense']},${req.body['Amount']},'s0000004' `;
+
+    }).then(result=>{
+        res.sendFile(__dirname + "/html/BillManager.html");
+        database.close();
+    }).catch((err) => {
+        console.log(err);
+      });
+
+});
 
 
 

@@ -65,6 +65,7 @@ body{
     padding: 2px 5px 2px 5px;
 }
 .addbtn{
+    float: right;
     padding-top: 80px;
     font-family: Roboto;
     font-style: normal;
@@ -74,7 +75,12 @@ body{
     border-radius: 10px; 
     padding: 5px;
 }
-
+#btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+}
 .addbtn:hover{
     cursor: pointer;
     background-color: orange;

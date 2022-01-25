@@ -4,7 +4,7 @@ var table = document.getElementById("table");
 var sum=0
 var total = document.getElementById("Total")
 window.onload = showData;
-
+ 
 function showData() {
   console.log("running mess fetch");
   fetch("/expenses")
