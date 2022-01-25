@@ -29,18 +29,23 @@ var config = {
 
 
 var database = new sql.ConnectionPool(config);
-/* database
-  .connect()
-  .then(pool => {
-    // pool.query`insert into Customer VALUES ('AA55','Ali','Bilal','Kh','Kh','Kh','4578',450.56)`;
-    return pool.query`select * FROM Customer`
-}).then(result => {
-    console.dir(result);
-    database.close();
-})
-  .catch((err) => {
-    console.log(err);
-  }); */
+//  database
+//   .connect()
+//   .then(pool => {
+//     // pool.query`insert into Customer VALUES ('AA55','Ali','Bilal','Kh','Kh','Kh','4578',450.56)`;
+//    // return pool.query`select * FROM Customer`
+// }).then(result => {
+//     console.dir(result);
+//     database.close();
+// })
+//   .catch((err) => {
+//     console.log(err);
+//   }); 
+
+
+
+
+
 
 // BackEnd
 let express = require("express");
@@ -95,7 +100,18 @@ app.post("/signin", async (req, res) => {
 
 
 app.post("/expenses", async (req, res) => {
-  console.log(req);
+
+    const result = await database.connect().then(pool=>{
+
+        return pool.query`exec ExpenseCalculator_Details ${req.body['Expense']},${req.body['Amount']},'s0000004' `;
+
+    }).then(result=>{
+        res.sendFile(__dirname + "/html/ExpenseCalculator.html");
+        database.close();
+    }).catch((err) => {
+        console.log(err);
+      });
+
 });
 
 
@@ -109,11 +125,11 @@ app.post("/expenses", async (req, res) => {
 
 app.post("/signup", async (req, res) => {
     var sid="";
-  var name=req.body['name'];
- const arr=name.split(" ");
- console.log(arr[0]);
+    var name=req.body['name'];
+    const arr=name.split(" ");
 
-      const result = await database.connect().then(pool=>{
+
+    const result = await database.connect().then(pool=>{
 
         return pool.query`SELECT TOP 1 ID FROM Student ORDER BY ID DESC `;
 
