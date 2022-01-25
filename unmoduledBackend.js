@@ -28,10 +28,12 @@ var database = new sql.ConnectionPool(config);
 
 // BackEnd
 let express = require("express");
-const Null = require("tedious/lib/data-types/null");
+var bodyParser = require("body-parser");
 let app = express();
-app.use(express.urlencoded({ extented: true }));
+app.use(bodyParser.urlencoded({ extented: true }));
 
+// const Null = require("tedious/lib/data-types/null");
+app.use(express.urlencoded({ extented: true }));
 app.use(express.static(__dirname));
 
 app.get("/", function (req, res) {
@@ -65,9 +67,16 @@ app.post("/signin", async (req, res) => {
     });
 });
 
+app.post("/expenses", async (req, res) => {
+  console.log(req);
+});
+app.post("/signup", async (req, res) => {
+  console.log(req);
+});
+
 // Attendance data for student dashboard
-app.get("/attendance", async (req, res) => {
-  let id = "2@2.com";
+/* app.get("/attendance", async (req, res) => {
+  let id = "s0000001";
   const result = await database
     .connect()
     .then((pool) => {
@@ -81,10 +90,10 @@ app.get("/attendance", async (req, res) => {
     .catch((err) => {
       console.log(err);
     });
-});
+}); */
 
 // Monthly Bills stats for student Dashboard
-app.get("/monthlybillstats", async (req, res) => {
+/* app.get("/monthlybillstats", async (req, res) => {
   let id = "2@2.com";
   const result = await database
     .connect()
@@ -99,7 +108,7 @@ app.get("/monthlybillstats", async (req, res) => {
     .catch((err) => {
       console.log(err);
     });
-});
+}); */
 
 // Student details fetched from database
 
