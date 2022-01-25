@@ -61,6 +61,32 @@ app.use(express.static(__dirname));
     //     })
 });
 
-app.listen(3001, function(){
+
+app.post("/signin", async (req, res) => {
+    user = req.body.em;
+     console.log(req.body);
+      console.log(req.body.em);
+      console.log(req.body.pass); 
+    const result = await database
+      .connect()
+      .then((pool) => {
+        return pool.query`SELECT stdName from studentproj WHERE pass= ${req.body.pass} AND id=${req.body.em}`;
+      })
+      .then((result) => {
+        if (result.recordset.length > 0) {
+          res.sendFile(__dirname + "/html/navBarManagment.html");
+        } else {
+          res.sendFile(__dirname + "/html/index.html");
+        }
+        database.close();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
+  
+
+app.listen(5500, function(){
     console.log("running");
 });
