@@ -34,9 +34,8 @@ REFERENCES Hostelites(ID) Primary Key
 ) 
 
 insert into Manager values('Astt','m0000001')
-
 create table TimeTable(
-DAY DATE,
+DAY varchar(15),
 SLOT1 varchar(15),
 SLOT2 varchar(15),
 SLOT3 varchar(15),
@@ -44,13 +43,13 @@ SLOT4 varchar(15),
 SLOT5 varchar(15),
 SLOT6 varchar(15),
 SLOT7 varchar(15),
-ID CHAR(8) NOT NULL constraint fkid Foreign key 
+ID CHAR(8) NOT NULL constraint fkidn Foreign key 
 References Student(ID) Primary Key
 )
-
+ALTER Table MonthlyBills ALTER COLUMN MONTHS varchar(15)
 create table MonthlyBills(
 BILL_ID      INT NOT NULL,
-MONTHS         DATE,
+MONTHS         varchar(15),
 STATUS       VARCHAR(10),
 AMOUNT       INT,
 ROOM_RENT    INT,
@@ -94,8 +93,8 @@ BREAKFAST  varchar(15),
 LUNCH      varchar(15),
 DINNER     varchar(15),
 )
-DELETE from MessSchedule where DAYS='Tuesday'
-insert into MessSchedule values('Saturday','Channa/Prattha','Roast','')
+TRUNCATE TABLE MessSchedule
+insert into MessSchedule values('Monday','Egg/Paratha','Andda Khakina','Biryani'),('Tuesday','Egg/Bread','Dal Rice','Daal Chana'),('Wednesday','Egg/Paratha','Mix Vegetable','Qorma'),('Thursday','French Toast','Andda Khakina','Daal Chana'),('Friday','Chocolate/Bread','Biryani','Daal Chana'),('Saturday','Haleem/Roti','Roast',''),('Sunday','Channa/Prattha','Roast','')
 SElECT * From MessSchedule
 
 create table RoomManager(
@@ -118,11 +117,48 @@ MID CHAR(8) NOT NULL  References Manager(ID),
 SID CHAR(8) NOT NULL  References Student(ID),
 primary key(MID,SID)
 )
-
 create table Attendance(
 DATE    DATE NOT NULL ,
 STATUS  VARCHAR(10) NOT NULL,
-ID CHAR(8) NOT NULL References Student(ID) Primary key
+ID CHAR(8) NOT NULL References Student(ID),
+ Primary key(ID,DATE)
 )
+create procedure attendancecalculation @ID CHAR(8)
+AS
+DECLARE @A CHAR(1)
+DECLARE @P CHAR(1)
+BEGIN
+SET @A=(SELECT COUNT(*) FROM Attendance
+WHERE STATUS='A' and ID=@ID)
+SET @P=(SELECT COUNT(*) FROM Attendance
+WHERE STATUS='P' and ID=@ID)
+--PRINT 'STUDENT ID '+@ID
+PRINT 'ABSENTS    '+@A
+PRINT 'PRESENTS   '+@P
+END
+GO
+insert into Attendance values('2021-02-12','P','s0000001')
+exec attendancecalculation 's0000001'
 
-insert into Attendance 
+create procedure ExpenseCalculator_Details(@details char(15),@amount int ,@id char(8) )
+As
+SET NOCOUNT ON
+insert into ExpenseCalculator values(@details,@amount,@id)
+GO
+
+
+create procedure TimeTable_Details(@DAY char(15),@slot1 varchar(15),@slot2 varchar(15),@slot3 varchar(15),@slot4 varchar(15),@slot5 varchar(15),@slot6 varchar(15),@slot7 varchar(15) )
+As
+SET NOCOUNT ON
+insert into TimeTable values(@DAY,@slot1,@slot2,@slot3,@slot4 ,@slot5 ,@slot6,@slot7,'s0000001')
+GO
+
+CREATE TRIGGER messManager ON BillManager AFTER INSERT
+AS 
+BEGIN
+SET NOCOUNT ON
+INSERT into MonthlyBills values (1,'Dec','Paid',10000,5500,300,500,200,500,0,,220,5800,0,0,'27-feb-2020','s0000001')
+END
+GO
+select * from BillManager
+select * from MonthlyBills
