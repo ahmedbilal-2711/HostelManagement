@@ -84,7 +84,7 @@ GO
 create table ExpenseCalculator(
 DETAILS VARCHAR(15),
 AMOUNT   INT NOT NULL,
-ID CHAR(8) NOT NULL References Student(ID) Primary key
+ID CHAR(8) NOT NULL References Student(ID)
 )
 
 create table MessSchedule(
@@ -153,12 +153,28 @@ SET NOCOUNT ON
 insert into TimeTable values(@DAY,@slot1,@slot2,@slot3,@slot4 ,@slot5 ,@slot6,@slot7,'s0000001')
 GO
 
-CREATE TRIGGER messManager ON BillManager AFTER INSERT
+CREATE TRIGGER messManagerNew ON BillManager AFTER INSERT
 AS 
 BEGIN
 SET NOCOUNT ON
-INSERT into MonthlyBills values (1,'Dec','Paid',10000,5500,300,500,200,500,0,,220,5800,0,0,'27-feb-2020','s0000001')
+DECLARE @roomrent int;
+SELECT @roomrent= ROOMRENT from inserted
+DECLARE @electricity int;
+SELECT @electricity= ELECTRICITY from inserted
+DECLARE @gas int;
+SELECT @gas= GAS from inserted
+DECLARE @water int;
+SELECT @water= WATER from inserted
+DECLARE @mess int;
+SELECT @mess= MESSING from inserted
+DECLARE @date date;
+SELECT @date= DATE from inserted
+INSERT into MonthlyBills values (1,'Dec','Paid',@roomrent,@gas,@electricity,@water,500,0,220,5800,0,0,'27-feb-2020','s0000001')
 END
 GO
+ALTER TABLE MonthlyBills DROP COLUMN Amount
+
+insert into BillManager values(5500,200,5500,400,5800,'27-feb-2020','m0000001','s0000001')
+
 select * from BillManager
-select * from MonthlyBills
+select * from ExpenseCalculator

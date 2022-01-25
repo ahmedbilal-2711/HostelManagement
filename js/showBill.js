@@ -14,8 +14,21 @@ function showBill() {
       document.getElementById("laundary").innerHTML = data[0].LAUNDARY;
       document.getElementById("mess").innerHTML = data[0].MESS;
       document.getElementById("arr").innerHTML = data[0].ARREARS;
-      document.getElementById("dd").innerHTML = data[0].DUE_DATE;
-      document.getElementById("amm").innerHTML = data[0].AMOUNT;
+      document.getElementById("dd").innerHTML = data[0].DUE_DATE.substring(
+        0,
+        10
+      );
+      document.getElementById("ss").innerHTML = data[0].STATUS;
+      document.getElementById("amm").innerHTML =
+        data[0].ROOM_RENT +
+        data[0].GAS +
+        data[0].ELECTRICITY +
+        data[0].WATER +
+        data[0].BEARER_CHARGES +
+        data[0].FINE +
+        data[0].LAUNDARY +
+        data[0].MESS +
+        data[0].ARREARS;
       console.log(data);
     });
 }
