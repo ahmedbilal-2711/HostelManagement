@@ -67,6 +67,23 @@ app.get("/", function (req, res) {
 
 
 
+app.get("/expenses", async (req, res) => {
+    const result = await database
+      .connect()
+      .then((pool) => {
+        return pool.query`SELECT * from ExpenseCalculator`;
+      })
+      .then((result) => {
+        // console.log("running");
+        // console.log(result);
+        res.send(result.recordset);
+        database.close();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
 var user;
 // Validation done
 
