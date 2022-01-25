@@ -1,17 +1,33 @@
-// Database Connection
+// // Database Connection
+// const { default: knex } = require("knex");
+// var sql = require("mssql");
+// var config = {
+//   user: "HostelDb",
+//   password: "hmdb",
+//   server: "AHMED\\SQLEXPRESS",
+//   database: "hmdb",
+//   port: 1434,
+//   options: {
+//     encrypt: false,
+//     useUTC: true,
+//   },
+// };
+
 const { default: knex } = require("knex");
 var sql = require("mssql");
 var config = {
-  user: "HostelDb",
-  password: "hmdb",
-  server: "AHMED\\SQLEXPRESS",
-  database: "hmdb",
-  port: 1434,
+  user: "root",
+  password: "686332",
+  server: "MUNEEB",
+  database: "Project",
+  port: 1433,
   options: {
     encrypt: false,
     useUTC: true,
   },
 };
+
+
 var database = new sql.ConnectionPool(config);
 /* database
   .connect()
@@ -28,18 +44,28 @@ var database = new sql.ConnectionPool(config);
 
 // BackEnd
 let express = require("express");
-const Null = require("tedious/lib/data-types/null");
+var bodyParser = require("body-parser");
 let app = express();
-app.use(express.urlencoded({ extented: true }));
+app.use(bodyParser.urlencoded({ extented: true }));
 
+// const Null = require("tedious/lib/data-types/null");
+app.use(express.urlencoded({ extented: true }));
 app.use(express.static(__dirname));
+
+
+
 
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/html/index.html");
 });
 
+
+
+
 var user;
 // Validation done
+
+
 app.post("/signin", async (req, res) => {
   user = req.body.em;
   /* console.log(req.body);
@@ -48,10 +74,12 @@ app.post("/signin", async (req, res) => {
   const result = await database
     .connect()
     .then((pool) => {
-      return pool.query`SELECT stdName from studentproj WHERE pass= ${req.body.pass} AND id=${req.body.em}`;
+      return pool.query`SELECT FIRST_NAME from Hostelites WHERE PASSWORD= ${req.body.pass} AND ID=${req.body.em}`;
     })
     .then((result) => {
-      if (result.recordset.length > 0) {
+      if (result.recordset.length > 0 && req.body.em.includes("s")) {
+        res.sendFile(__dirname + "/html/navBar.html");
+      } else if (result.recordset.length > 0 && req.body.em.includes("m")) {
         res.sendFile(__dirname + "/html/navBarManagment.html");
       } else {
         res.sendFile(__dirname + "/html/index.html");
@@ -63,13 +91,54 @@ app.post("/signin", async (req, res) => {
     });
 });
 
+
+
+
+app.post("/expenses", async (req, res) => {
+  console.log(req);
+});
+
+
+
+
+
+
+
+
+
+
+app.post("/signup", async (req, res) => {
+    var sid="";
+  var name=req.body['name'];
+ const arr=name.split(" ");
+ console.log(arr[0]);
+
+      const result = await database.connect().then(pool=>{
+
+        return pool.query`SELECT TOP 1 ID FROM Student ORDER BY ID DESC `;
+
+    }).then(result=>{
+        let len=(parseInt(result.recordset[0].ID.slice(1,8))+1).toString().length;
+        sid=result.recordset[0].ID.replace(result.recordset[0].ID.slice(8-len,8),parseInt(result.recordset[0].ID.slice(1,8))+1).toString();
+        res.sendFile(__dirname + "/html/index.html")
+        database.close();
+    }).catch((err) => {
+        console.log(err);
+      });
+
+    database.connect().then(pool=>
+        {
+             pool.query`exec signupDetails ${sid},${req.body['cnic']},${arr[0]},${arr[1]}, ${req.body['Father_Name']},${req.body['dob']},${req.body['domicile']},'12345',${req.body['Po_Address']},${req.body['Phone']},${req.body['meritno']},${req.body['fno']},${req.body['discipline']},${req.body['semester']} `
+        })
+});
+
 // Attendance data for student dashboard
-app.get("/attendance", async (req, res) => {
-  let id = "2@2.com";
+/* app.get("/attendance", async (req, res) => {
+  let id = "s0000001";
   const result = await database
     .connect()
     .then((pool) => {
-      return pool.query`SELECT present,absent from attproj WHERE id=${id}`;
+      return pool.query`SELECT count() from attproj WHERE id=${id}`;
     })
     .then((result) => {
       // console.log( result);
@@ -79,10 +148,10 @@ app.get("/attendance", async (req, res) => {
     .catch((err) => {
       console.log(err);
     });
-});
+}); */
 
 // Monthly Bills stats for student Dashboard
-app.get("/monthlybillstats", async (req, res) => {
+/* app.get("/monthlybillstats", async (req, res) => {
   let id = "2@2.com";
   const result = await database
     .connect()
@@ -97,7 +166,9 @@ app.get("/monthlybillstats", async (req, res) => {
     .catch((err) => {
       console.log(err);
     });
-});
+}); */
+
+// Student details fetched from database
 
 app.listen(3001, function () {
   console.log("running");

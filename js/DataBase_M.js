@@ -37,6 +37,13 @@ let app = express();
 app.use(express.urlencoded({extented:true}));
 app.use(express.static(__dirname));
 
+
+app.get("/", function (req, res) {
+    res.sendFile(__dirname + "html/index.html");
+  });
+
+
+
 // Getting the data from bio form insert into the table 
   app.post('/signup',async (req,res)=> {
       console.log("post");
@@ -62,31 +69,8 @@ app.use(express.static(__dirname));
 });
 
 
-app.post("/signin", async (req, res) => {
-    user = req.body.em;
-     console.log(req.body);
-      console.log(req.body.em);
-      console.log(req.body.pass); 
-    const result = await database
-      .connect()
-      .then((pool) => {
-        return pool.query`SELECT stdName from studentproj WHERE pass= ${req.body.pass} AND id=${req.body.em}`;
-      })
-      .then((result) => {
-        if (result.recordset.length > 0) {
-          res.sendFile(__dirname + "/html/navBarManagment.html");
-        } else {
-          res.sendFile(__dirname + "/html/index.html");
-        }
-        database.close();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  });
+ 
 
-  
-
-app.listen(5500, function(){
+app.listen(3001, function(){
     console.log("running");
 });
