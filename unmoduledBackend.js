@@ -55,6 +55,7 @@ app.post("/signin", async (req, res) => {
     .then((result) => {
       if (result.recordset.length > 0 && req.body.em.includes("s")) {
         res.sendFile(__dirname + "/html/navBar.html");
+        // res.json({ id: req.body.em });
       } else if (result.recordset.length > 0 && req.body.em.includes("m")) {
         res.sendFile(__dirname + "/html/navBarManagment.html");
       } else {
@@ -75,22 +76,23 @@ app.post("/signup", async (req, res) => {
 });
 
 // Attendance data for student dashboard
-/* app.get("/attendance", async (req, res) => {
+app.get("/attendance", async (req, res) => {
   let id = "s0000001";
   const result = await database
     .connect()
     .then((pool) => {
-      return pool.query`SELECT count() from attproj WHERE id=${id}`;
+      return pool.query`attendancecalculation 's0000001'`;
     })
     .then((result) => {
-      // console.log( result);
-      res.send(result.recordset);
+      console.log("attendance");
+      console.log(result);
+      // res.send(result.recordset);
       database.close();
     })
     .catch((err) => {
       console.log(err);
     });
-}); */
+});
 
 // Monthly Bills stats for student Dashboard
 /* app.get("/monthlybillstats", async (req, res) => {
@@ -109,6 +111,24 @@ app.post("/signup", async (req, res) => {
       console.log(err);
     });
 }); */
+
+// Fetch data to show in Mess table
+app.get("/messTableShow", async (req, res) => {
+  const result = await database
+    .connect()
+    .then((pool) => {
+      return pool.query`SELECT * from MessSchedule`;
+    })
+    .then((result) => {
+      // console.log("running");
+      // console.log(result.recordset);
+      res.send(result.recordset);
+      database.close();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
 // Student details fetched from database
 

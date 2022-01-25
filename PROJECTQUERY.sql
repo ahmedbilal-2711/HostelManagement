@@ -12,6 +12,7 @@ PCNO        CHAR(11) not null
 )
 
 insert into Hostelites values('s0000001','4220115323749','Ahmed','Bilal','Muhammad Bilal','27-nov-2001','Sindh','1','Flat A-11 Dawood Heights Sector 5K North Karachi','03352499556')
+insert into Hostelites values('m0000001','4220115323749','Wasif','Khan','Sher Khan','27-dec-1962','KPK','1m','House number 502, Street Gola Bazar,KPK','03215436789')
 SELECT * from Hostelites
 update  Hostelites set ID ='s01.@com' where ID='s0000001'
 
@@ -31,6 +32,8 @@ RANKS  char(20),
 ID CHAR(8) CONSTRAINT fkmanagerid Foreign key
 REFERENCES Hostelites(ID) Primary Key
 ) 
+
+insert into Manager values('Astt','m0000001')
 
 create table TimeTable(
 DAY DATE,
@@ -86,12 +89,14 @@ ID CHAR(8) NOT NULL References Student(ID) Primary key
 )
 
 create table MessSchedule(
-DAYS       DATE, 
+DAYS       varchar(15), 
 BREAKFAST  varchar(15),
 LUNCH      varchar(15),
 DINNER     varchar(15),
-ID CHAR(8) NOT NULL References Manager(ID) Primary Key
 )
+DELETE from MessSchedule where DAYS='Tuesday'
+insert into MessSchedule values('Saturday','Channa/Prattha','Roast','')
+SElECT * From MessSchedule
 
 create table RoomManager(
 FLATNO int,

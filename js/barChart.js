@@ -4,7 +4,7 @@ window.onload = attendance;
 // window.onload=billsHistory;
 function attendance() {
   console.log("Attendance function called");
-  fetch("http://localhost:3001/attendance")
+  fetch("/attendance")
     .then((res) => res.json())
     .then((data) => {
       var pieChart = new Chart(pie, {
