@@ -37,6 +37,13 @@ let app = express();
 app.use(express.urlencoded({extented:true}));
 app.use(express.static(__dirname));
 
+
+app.get("/", function (req, res) {
+    res.sendFile(__dirname + "html/index.html");
+  });
+
+
+
 // Getting the data from bio form insert into the table 
   app.post('/signup',async (req,res)=> {
       console.log("post");
@@ -60,6 +67,9 @@ app.use(express.static(__dirname));
     //          pool.query`exec signupDetails 's0000002','8110207692761','Muneeb','Aslam','M Aslam','05-dec-2000','Bhimber','686332','Near DHO Hospital Bhimber','03038707601','891','03419227658','CSE','3' `
     //     })
 });
+
+
+ 
 
 app.listen(3001, function(){
     console.log("running");

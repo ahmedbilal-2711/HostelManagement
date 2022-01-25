@@ -1,30 +1,51 @@
-// Database Connection
+// // Database Connection
+// const { default: knex } = require("knex");
+// var sql = require("mssql");
+// var config = {
+//   user: "HostelDb",
+//   password: "hmdb",
+//   server: "AHMED\\SQLEXPRESS",
+//   database: "hmdb",
+//   port: 1434,
+//   options: {
+//     encrypt: false,
+//     useUTC: true,
+//   },
+// };
+
 const { default: knex } = require("knex");
 var sql = require("mssql");
 var config = {
-  user: "HostelDb",
-  password: "hmdb",
-  server: "AHMED\\SQLEXPRESS",
-  database: "hmdb",
-  port: 1434,
+  user: "root",
+  password: "686332",
+  server: "MUNEEB",
+  database: "Project",
+  port: 1433,
   options: {
     encrypt: false,
     useUTC: true,
   },
 };
+
+
 var database = new sql.ConnectionPool(config);
-/* database
-  .connect()
-  .then(pool => {
-    // pool.query`insert into Customer VALUES ('AA55','Ali','Bilal','Kh','Kh','Kh','4578',450.56)`;
-    return pool.query`select * FROM Customer`
-}).then(result => {
-    console.dir(result);
-    database.close();
-})
-  .catch((err) => {
-    console.log(err);
-  }); */
+//  database
+//   .connect()
+//   .then(pool => {
+//     // pool.query`insert into Customer VALUES ('AA55','Ali','Bilal','Kh','Kh','Kh','4578',450.56)`;
+//    // return pool.query`select * FROM Customer`
+// }).then(result => {
+//     console.dir(result);
+//     database.close();
+// })
+//   .catch((err) => {
+//     console.log(err);
+//   }); 
+
+
+
+
+
 
 // BackEnd
 let express = require("express");
@@ -36,12 +57,37 @@ app.use(bodyParser.urlencoded({ extented: true }));
 app.use(express.urlencoded({ extented: true }));
 app.use(express.static(__dirname));
 
+
+
+
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/html/index.html");
 });
 
+
+
+
+app.get("/expenses", async (req, res) => {
+    const result = await database
+      .connect()
+      .then((pool) => {
+        return pool.query`SELECT * from ExpenseCalculator`;
+      })
+      .then((result) => {
+        // console.log("running");
+        // console.log(result);
+        res.send(result.recordset);
+        database.close();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
 var user;
 // Validation done
+
+
 app.post("/signin", async (req, res) => {
   user = req.body.em;
   /* console.log(req.body);
@@ -68,11 +114,56 @@ app.post("/signin", async (req, res) => {
     });
 });
 
+
+
+
 app.post("/expenses", async (req, res) => {
-  console.log(req);
+
+    const result = await database.connect().then(pool=>{
+
+        return pool.query`exec ExpenseCalculator_Details ${req.body['Expense']},${req.body['Amount']},'s0000004' `;
+
+    }).then(result=>{
+        res.sendFile(__dirname + "/html/ExpenseCalculator.html");
+        database.close();
+    }).catch((err) => {
+        console.log(err);
+      });
+
 });
+
+
+
+
+
+
+
+
+
+
 app.post("/signup", async (req, res) => {
-  console.log(req);
+    var sid="";
+    var name=req.body['name'];
+    const arr=name.split(" ");
+
+
+    const result = await database.connect().then(pool=>{
+
+        return pool.query`SELECT TOP 1 ID FROM Student ORDER BY ID DESC `;
+
+    }).then(result=>{
+        let len=(parseInt(result.recordset[0].ID.slice(1,8))+1).toString().length;
+        sid=result.recordset[0].ID.replace(result.recordset[0].ID.slice(8-len,8),parseInt(result.recordset[0].ID.slice(1,8))+1).toString();
+        res.sendFile(__dirname + "/html/index.html")
+        database.close();
+    }).catch((err) => {
+        console.log(err);
+      });
+
+    database.connect().then(pool=>
+        {
+             pool.query`exec signupDetails ${sid},${req.body['cnic']},${arr[0]},${arr[1]}, ${req.body['Father_Name']},${req.body['dob']},${req.body['domicile']},'12345',${req.body['Po_Address']},${req.body['Phone']},${req.body['meritno']},${req.body['fno']},${req.body['discipline']},${req.body['semester']} `
+        })
 });
 
 // Attendance data for student dashboard

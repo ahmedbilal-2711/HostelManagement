@@ -22,18 +22,6 @@ body{
     font-size: 32px;
 }
 
-.input{
-    display: flex;
-    flex-direction: row; 
-}
-.flex-container{
-    margin-top: 40px;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    justify-content: center;
-
-}
 .enterheading{
     color:orange;
     font-family: Roboto;
