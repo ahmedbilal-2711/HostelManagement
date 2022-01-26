@@ -150,42 +150,22 @@ app.post("/signup", async (req, res) => {
   });
 });
 
-/* // Attendance data for student dashboard
+// Attendance data for student dashboard
 app.get("/attendance", async (req, res) => {
   let id = "s0000001";
   const result = await database
     .connect()
     .then((pool) => {
-      return pool.query`attendancecalculation 's0000001'`;
+      return pool.query`select status,count(status) AS NOD from Attendance WHERE ID=${id} group by STATUS`;
     })
     .then((result) => {
-      console.log("attendance");
-      console.log(result);
-      // res.send(result.recordset);
-      database.close();
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-}); */
-
-// Monthly Bills stats for student Dashboard
-/* app.get("/monthlybillstats", async (req, res) => {
-  let id = "2@2.com";
-  const result = await database
-    .connect()
-    .then((pool) => {
-      return pool.query`SELECT * from mbillsproj WHERE id=${id}`;
-    })
-    .then((result) => {
-      // console.log( result);
       res.send(result.recordset);
       database.close();
     })
     .catch((err) => {
       console.log(err);
     });
-}); */
+});
 
 // Fetch data to show in Mess table
 app.get("/messTableShow", async (req, res) => {
@@ -214,7 +194,7 @@ app.get("/showHostelBill", async (req, res) => {
       return pool.query`SELECT * FROM MonthlyBills where ID=${id}`;
     })
     .then((result) => {
-      // console.log(results.recordset);
+      console.log(result.recordset);
       res.send(result.recordset);
       database.close();
     })
@@ -222,7 +202,24 @@ app.get("/showHostelBill", async (req, res) => {
       console.log(err);
     });
 });
+
 // Student details fetched from database
+app.get("/showStdDetails", async (req, res) => {
+  let id = "s0000001";
+  const result = await database
+    .connect()
+    .then((pool) => {
+      return pool.query`SELECT FIRST_NAME,LAST_NAME,s.ID,CNIC,DISCIPLINE,PCNO FROM Hostelites AS h INNER JOIN STUDENT AS s ON h.ID = s.ID  where s.ID=${id}`;
+    })
+    .then((result) => {
+      // console.log(result.recordset);
+      res.send(result.recordset);
+      database.close();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
 app.listen(3001, function () {
   console.log("running");
