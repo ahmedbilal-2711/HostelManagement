@@ -75,3 +75,9 @@ h3{
     align-items: center;
     color: white;
 }
+#dateinput{
+    display: none;
+}
+#statusinput{
+    display: none;
+}

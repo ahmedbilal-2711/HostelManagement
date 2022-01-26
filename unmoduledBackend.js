@@ -119,7 +119,10 @@ app.post("/signin", async (req, res) => {
 app.post("/manager", async (req, res) => {
   console.log(req.body);
 });
-
+// Data to Attendance Table
+app.post("/manager", async (req, res) => {
+  console.log(req.body);
+});
 // Bring data from signup page and enter in database
 app.post("/signup", async (req, res) => {
   var sid = "";
@@ -214,6 +217,25 @@ app.get("/showStdDetails", async (req, res) => {
     .then((result) => {
       // console.log(result.recordset);
       res.send(result.recordset);
+      database.close();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+app.post("/attendanceenter", async (req, res) => {
+  var date = req.body.date;
+  const arr = date.split(" ");
+  var str = arr[2] + "-" + arr[1] + "-" + arr[3];
+
+  const result = await database
+    .connect()
+    .then((pool) => {
+      return pool.query`insert into Attendance values (${str},${req.body.status},'s0000001') `;
+    })
+    .then((result) => {
+      res.sendFile(__dirname + "/html/studentDashboard.html");
       database.close();
     })
     .catch((err) => {

@@ -25,6 +25,8 @@ ID CHAR(8) CONSTRAINT fkstudentid Foreign key
 REFERENCES Hostelites(ID) Primary key
 )
 
+SELECT FIRST_NAME,LAST_NAME,s.ID,CNIC,DISCIPLINE,PCNO FROM Hostelites AS h INNER JOIN STUDENT AS s ON h.ID = s.ID where s.ID='s0000001'
+
 insert into Student values(823,'03362499556','CSE','3','s0000001')
 
 create table Manager(
@@ -138,7 +140,7 @@ PRINT 'PRESENTS   '+@P
 END
 GO
 insert into Attendance values('2021-02-12','P','s0000001')
-exec attendancecalculation 's0000001'
+select status,count(status) from Attendance where id='s0000001' group by STATUS
 
 create procedure ExpenseCalculator_Details(@details char(15),@amount int ,@id char(8) )
 As

@@ -34,14 +34,18 @@
             <canvas id="attendance"></canvas>
         </div>
     </div>
+    <form action="/attendanceenter" method="post">
     <div id="attendanceMark">
                 <h3>MARK ATTENDANCE HERE</h3>
                 <div id="calendar">
-                    <span id="date">DATE</span>
+                    <span id="date" >DATE</span>
+                    <input type="text" id="dateinput" name="date" >
                     <span id="time">TIME</span>
+                    <input type="text" id="statusinput" name="status" >
                 </div>
                 <button id="markPres">PRESENT</button>
     </div>
+</form>
 </body>
 <script src="../js/barChart.js"></script>
 <!-- <script src="../js/data.js"></script> -->

@@ -78,8 +78,12 @@ presentButton.addEventListener("click", (e) => {
   if (timedate.getHours() == 23 && timedate.getMinutes() < 59) {
     console.log("dfjhdj");
     document.getElementById("attendanceMark").style.borderColor = "green";
+    document.getElementById("dateinput").value = timedate.toDateString();
+    document.getElementById("statusinput").value = "P";
   } else {
     alert("You can mark your attendance between 2100hrs and 2200hrs");
     document.getElementById("attendanceMark").style.borderColor = "red";
+    document.getElementById("dateinput").value = timedate.toDateString();
+    document.getElementById("statusinput").value = "A";
   }
 });
